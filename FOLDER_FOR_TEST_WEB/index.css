@@ -1,5 +1,5 @@
 .blockTitle {
-    width: 1070px;
+    width: 700px;
     font-size: 30px;
     color: #222;
     padding-top: 40px;
@@ -7,12 +7,6 @@
     letter-spacing: 2px;
     margin-left: 50%;
     transform: translateX(-50%);
-}
-
-@media (max-width:1070px) {
-    .blockTitle {
-        width: 700px;
-    }
 }
 
 @media (max-width:730px) {
