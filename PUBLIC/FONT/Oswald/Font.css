@@ -2,3 +2,7 @@
     font-family: 'Oswald';
     src: url(./static/Oswald-Regular.ttf);
 }
+@font-face {
+    font-family: 'OswaldLight';
+    src: url(./static/Oswald-Light.ttf);
+}
