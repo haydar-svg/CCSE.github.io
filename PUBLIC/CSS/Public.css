@@ -5,7 +5,6 @@
     text-transform: capitalize !important;
     font-family: 'Oswald' !important;
 }
-
 input:focus {
     outline: none;
 }
@@ -13,7 +12,7 @@ input:focus {
 a {
     text-decoration: none;
     color: #fff;
-}
+} 
 
 body {
     overflow-x: hidden;
