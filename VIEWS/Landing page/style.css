@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius:0 0 400px 400px;
+    border-radius:0 0 300px 300px;
     background-image: url('../../PUBLIC/IMAGES/consulting-room.jpg'); 
     background-position: center;
     background-repeat: no-repeat;
@@ -27,6 +27,13 @@
     width: 100%;
     min-height: 70vh;  
     position: relative;
+}
+.Center-content .section{
+    display: flex;
+    position: relative;
+    top: -30px;
+    flex-direction: column;
+    align-items: center;
 }
 .Center-content h1{
     color: white;
@@ -44,11 +51,11 @@
     -webkit-text-stroke-width: 0.1px;
 }
 .Center-content button {
-    padding:12px 12px;
-    width: 170px;
+    padding:5px 5px;
+    width: 130px;
     background: none;
     color: white;
     cursor: pointer;
-    border: 1px solid;
-    border-image: linear-gradient(to left, #0077cc, #ffffff,red) 1;
+    border: 1px solid white;
+    /* border-image: linear-gradient(to left, #0077cc, #ffffff,red) 1; */
 }
