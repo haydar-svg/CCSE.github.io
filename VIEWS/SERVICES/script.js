@@ -6,11 +6,14 @@ const ListServices=[
     {id:5,image:`../../PUBLIC/IMAGES/INGENIERIE.svg`,title:'INGÉNIERIE',description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, animi voluptate perferendis impedit est quae natus architecto`},
     {id:6,image:`../../PUBLIC/IMAGES/FORMATION.svg`,title:'FORMATION',description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, animi voluptate perferendis impedit est quae natus architecto`}
 ]
+var serviceContainer=document.querySelector(".serviceContainer")
+var services=document.querySelector(".service")
+var GetMore=document.querySelector(".getMore-container")
+var show=false
 function listServicesContainer() {
-    let serviceContainer=document.getElementById("serviceContainer")
 ListServices.map((elem,i)=>{
         serviceContainer.innerHTML+=`
-            <div class="service">
+            <div class="service" onclick="OpenWindow()">
     <img src=${elem.image} alt=${elem.title}>
     <div class="serviceTitle">
         ${elem.title}
@@ -25,4 +28,10 @@ ListServices.map((elem,i)=>{
 </div>
         `        
 })
+}
+function OpenWindow() {
+    GetMore.style.display='block'
+}
+function CloseWindow() {
+    GetMore.style.display='none'
 }
