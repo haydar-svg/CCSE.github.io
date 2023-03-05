@@ -46,11 +46,13 @@
     position: relative;
     margin: 20px;
     background: linear-gradient(135deg,rgb(247, 247, 247) 30%,rgba(255, 255, 255, 0.3));
+    transition: 1s;
 }
 
 .service:hover {
-    background-color: #f8f8f8;
+    background-color: rgb(247, 247, 247);
     cursor: pointer;
+    border-radius: 0 0 130px 0;
 }
 
 .service>img {
@@ -104,7 +106,6 @@
     background-color: rgb(255, 255, 255);
     display: none;
     top: 0;
-
 }
 .getMore-container img{
     position: absolute;
