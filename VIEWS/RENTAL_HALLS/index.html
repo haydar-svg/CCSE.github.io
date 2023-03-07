@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .rentalHalls{
+            width: 100%;
+            height: 700px;
+            background-image: linear-gradient(#00000088,#00000081),url(../../PUBLIC/IMAGES/84a206.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .descriptionText{
+            font-size: 40px;
+            color: #fff;
+            padding-top: 70px;
+            padding-bottom: 10px;
+            letter-spacing: 2px;
+            margin-left: 5%;
+            padding-left: 5px;
+        }
+        .details{
+            width: 90%;
+            height:450px ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left:5%;
+            flex-wrap: wrap;
+        }
+        .priceDetail,.equipementDetails,.featuesDetails{
+            width: 330px;
+            height: 450px;
+            border-radius: 5px;
+            margin-top: 40px;
+            position: relative;
+            background: linear-gradient(135deg, rgba(247, 247, 247, 0.877) 30%, rgba(255, 255, 255, 0));
+            flex-grow: 1;
+            margin: 5px;
+            min-width:300px ;
+        }
+
+        @media (max-width:1130px) {
+            .priceDetail,.equipementDetails,.featuesDetails{
+            width: 330px;
+            height:250px;
+        }
+        }
+        @media (max-width:770px) {
+            .rentalHalls{
+            width: 100%;
+            height: 1000px;
+            background-image: linear-gradient(#00000088,#00000081),url(../../PUBLIC/IMAGES/84a206.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        }
+    </style>
+    <div class="rentalHalls">
+        <p class="descriptionText">
+            Nous mettons nos salles à votre disposition
+        </p>
+        <div class="details">
+            <style>
+.priceDetailTitle{
+    font-size: 24px;
+    color: #222;
+    padding-top: 30px;
+    padding-left: 15px;
+}
+            </style>
+            <div class="priceDetail">
+                <p class="priceDetailTitle">
+                    DES TARIFS TRÈS ATTRACTIFS
+                </p>
+            </div>
+            <div class="equipementDetails">
+
+            </div>
+            <div class="featuesDetails">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
