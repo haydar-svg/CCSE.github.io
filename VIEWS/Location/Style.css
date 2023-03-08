@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center; 
     flex-wrap: wrap;
+    
   }  
   .title-container{
     width: 1020px;
@@ -22,6 +23,7 @@
     position: relative;
     transition:  0.2s ease-in;
     box-shadow:0px 10px 30px #333;
+    border-radius: 20px;
   }
   
   .Card:hover {
@@ -32,29 +34,32 @@
     height: 200px;
     width: 300px;
     position: relative;
-    background: rgba(137, 196, 244,0.5);
-
+    background-image: url("../../PUBLIC/IMAGES/Salle.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   .price-category h2 {
       margin: 0;
       position: relative;
-      top: 130px;
-      text-align: center;
+      top: 145px;
+      left: 5px;
       font-family: 'Lato';
       font-size: 15px;
+      z-index: 100;
   }
   #spanPrix {
-    font-size: 40px;
+    font-size: 38px;
   }
   
   .category {
-    height: 120px;
+    height: 80px;
     width: 300px;
-    background: rgba(137, 196, 244,0.5);
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     position: absolute;
-    top: 0;
+    bottom: 0;
+    border-bottom: 100px solid rgba(211, 213, 214, 0.637);
+    border-right: 300px solid transparent;
   }
   
   .category h1 {
@@ -80,7 +85,6 @@
     position: relative;
     top: 5px;
     right: -10px;
-    fill: blue;
   }
   #valide{
     fill: #2fe22f;
