@@ -1,0 +1,34 @@
+.indicateur-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+.cart-indicateur{
+    width: 220px;
+    height: 100px;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.cart-indicateur img{
+    width: 40px;
+    height: auto;
+}
+.chiffres .num{
+    font-size: 70px;
+    font-weight: 300;
+    color: #222;
+}
+.category {
+    font-size: 25px;
+    word-break: break-all;
+}

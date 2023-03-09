@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1{
+            position: relative;
+            top: 180px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="one">Section 1</section>
+<section class="two">Section 2</section>
+    <section class="three">
+    <h1>Les indicateurs clés</h1>
+    <div class="indicateur-container">
+        <div class="cart-indicateur">
+            <img src="../../PUBLIC/IMAGES/person.svg" alt="person">
+            <div class="chiffres">
+                <div class="num" data-goal="13">0</div>
+            </div>
+            <p class="category">Ans d'expérience</p>
+        </div>
+        <div class="cart-indicateur">
+            <img src="../../PUBLIC/IMAGES/person.svg" alt="person">
+            <div class="chiffres">
+                <div class="num" data-goal="500">0</div>
+            </div>
+            <p class="category">Clients</p>
+        </div>
+        <div class="cart-indicateur">
+            <img src="../../PUBLIC/IMAGES/person.svg" alt="person">
+            <div class="chiffres">
+                <div class="num" data-goal="40">0</div>
+            </div>
+            <p class="category">MDH Chiffres d'affaire</p>
+        </div>
+        <div class="cart-indicateur">
+            <img src="../../PUBLIC/IMAGES/person.svg" alt="person">
+            <div class="chiffres">
+                <div class="num" data-goal="600">0</div>
+            </div>
+            <p class="category">Projets réalisés
+            </p>
+        </div>
+    </div>
+</section>
+<section class="four">Section 3</section>
+</body>
+<script>
+let chiffre = document.querySelectorAll(".chiffres .num");
+let section_three = document.querySelector(".three");
+let started = false;
+
+window.onscroll = function () {
+  if (window.scrollY >= section_three.offsetTop) {
+    if (!started) {
+      chiffre.forEach((num) => startCount(num));
+    }
+    started = true;
+  }
+};
+
+function startCount(num) {
+  let goal = num.dataset.goal;
+  let count = setInterval(() => {
+    num.textContent++;
+    if (num.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000/goal);
+}
+</script>
+</html>

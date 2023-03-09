@@ -20,7 +20,7 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(241, 248, 255);
             position: absolute;
             line-height: 700px;
             bottom: 0;
@@ -28,38 +28,51 @@
         .references>img {
             width: 100px;
             width: 100px;
+            /* animation-name: '';
+            animation-delay: 0s;
+            animation-duration: 1s; */
         }
+        /* @keyframes animation_logos {
+            from {
+                width: 100px;
+            }to {
+                width: 130px;
+            }
+        } */
         
         .references>img:hover {
             cursor: pointer;
         }
        .references .back,.references .forward{
             width: 30px;
-
         }
     </style>
 </head>
 
 <body>
     <div class="references">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/AL_AMANA.png" alt="refernece" id="slide" onmouseenter="changeImages('../../PUBLIC/IMAGES/Références/AL_AMANA.png')" onmouseleave="changeImages('../../PUBLIC/IMAGES/Références/Logos/AL_AMANA.png',100,200)">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/ANAPEC.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/BRICOMA.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/OFPPT.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/GIAC.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/GIAC_TER.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/INSTITUTION.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/IRRIEST.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/MOULOUYA.png" alt="refernece">
-        <img src="../../PUBLIC/IMAGES/Références/Logos/SMS.png" alt="refernece">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/AL_AMANA.png" name="../../PUBLIC/IMAGES/Références/AL_AMANA.png" alt="refernece" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/ANAPEC.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/ANAPEC.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/BRICOMA.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/BRICOMA.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/OFPPT.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/OFPPT.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/GIAC.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/GIAC.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/GIAC_TER.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/GIAC_TERTIAIRE.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/InstitutionMoulayIsmail.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/INSTITUTION_MOULAYISMAIL.png"   onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/IRRIEST.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/IRRIEST.png"   onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/MOULOUYA.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/MOULOUYA.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/SMS.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/SMS.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
     </div>
 </body>
     <script>
-        function changeImages(src,width,height) {
-                document.getElementById('slide').src=src;
-                document.getElementById('slide').style.width=width;
-                document.getElementById('slide').style.height=height;
-                changed=false
+        function $(id) {
+            return document.getElementById(id)
+        }
+        function changeImages(event) {
+            var source=event.getAttribute("src")
+            var newsource=event.getAttribute("name")
+                event.setAttribute('src',newsource)
+                event.setAttribute('name',source)
+                // event.style.animationName='animation_logos'
             }
     </script>
 </html>
