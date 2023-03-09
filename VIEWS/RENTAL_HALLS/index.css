@@ -18,7 +18,7 @@
 
 .details {
     width: 90%;
-    height: 450px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +35,7 @@
     border-radius: 5px;
     margin-top: 40px;
     position: relative;
-    background: linear-gradient(135deg, rgb(218, 233, 255) 30%, rgba(179, 208, 253, 0.219));
+    background: linear-gradient(135deg, rgb(218, 233, 255) 30%, rgba(179, 209, 253, 0.137));
     flex-grow: 1;
     margin: 5px;
     min-width: 300px;
@@ -59,11 +59,9 @@
     color: #333;
     padding-top: 10px;
     padding-left: 15px;
-    text-transform: lowercase;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
 }
 
 .detailElement>img {
@@ -71,12 +69,33 @@
     padding-right: 4px;
 }
 
+.hallsDescriptionContainer {
+    direction: rtl;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.hallsDescription {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgb(124, 177, 255), rgba(179, 209, 253, 0));
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
 @media (max-width:1130px) {
     .rentalHalls {
-        height: 840px;
+        height: 900px;
     }
     .priceDetail {
-        background: linear-gradient(135deg, rgba(179, 209, 253, 0.685), rgb(218, 233, 255));
+        background: linear-gradient(135deg, rgba(179, 209, 253, 0.836), rgb(218, 233, 255));
     }
     .priceDetail,
     .equipementDetails,
@@ -94,7 +113,7 @@
 
 @media (max-width:770px) {
     .rentalHalls {
-        height: 1200px;
+        height: 1350px;
         background-position: center !important;
     }
     .priceDetail {
@@ -105,11 +124,17 @@
     .featuesDetails {
         height: auto;
         min-height: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
     .priceDetail>p:last-of-type {
         padding-bottom: 30px;
     }
     .equipementDetails>p:last-of-type {
         padding-bottom: 30px;
+    }
+    .hallsDescription {
+        width: 100%;
+        margin-right: 0px;
     }
 }
