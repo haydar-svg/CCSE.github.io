@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <title>Document</title>
+    <style>
+        .rentalHalls {
+            width: 100%;
+            height: 700px;
+            background-image: linear-gradient(#00000088, #00000081), url(../../PUBLIC/IMAGES/pc.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .elementContainer {
+            width: 90%;
+            height: 700px;
+            margin-left: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .serviceTitle {
+            width: 50%;
+            height: auto;
+            font-size: 80px;
+            font-weight: 500;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .equipementDetails {
+            height: auto;
+            min-height: 450px;
+            border-radius: 5px;
+            margin-top: 40px;
+            position: relative;
+            background: linear-gradient(135deg, rgb(193, 197, 255) 30%, rgba(179, 209, 253, 0.137));
+            flex-grow: 1;
+            margin: 5px;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .dtailIcon {
+            width: 40px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        
+        .detailTitle {
+            font-size: 25px;
+            color: #333;
+            padding-top: 0px;
+            padding-left: 15px;
+        }
+        
+        .detailElement {
+            font-size: 18px;
+            color: #333;
+            padding-top: 10px;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .detailElement>img {
+            width: 35px;
+            padding-right: 4px;
+        }
+        
+        .explore {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            right: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rentalHalls">
+        <div class="elementContainer">
+            <div class="serviceTitle">
+                Nous mettons nos salles à votre disposition
+            </div>
+            <div class="equipementDetails">
+                <img src="../../PUBLIC/IMAGES/tools.svg" alt="Desc icon" class="dtailIcon">
+                <p class="detailTitle">
+                    DES ÉQUIPEMENTS VARIÉS
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> matériels audiovisuel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> vidéo projecteur
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> téléviseur
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> matériel informatique
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">accès wifi haut débit
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> tableau
+                </p>
+                <div class="explore">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
