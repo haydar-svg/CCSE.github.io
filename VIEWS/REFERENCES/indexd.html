@@ -8,48 +8,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
     <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .references {
-            width: 100%;         
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            background-color: rgb(241, 248, 255);
-            position: absolute;
-            line-height: 700px;
-            bottom: 0;
-        }
-        .references>img {
-            width: 100px;
-            width: 100px;
-            /* animation-name: '';
-            animation-delay: 0s;
-            animation-duration: 1s; */
-        }
-        /* @keyframes animation_logos {
-            from {
-                width: 100px;
-            }to {
-                width: 130px;
-            }
-        } */
-        
-        .references>img:hover {
-            cursor: pointer;
-        }
-       .references .back,.references .forward{
-            width: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="ref-container">
     <div class="references">
         <img src="../../PUBLIC/IMAGES/Références/Logos/AL_AMANA.png" name="../../PUBLIC/IMAGES/Références/AL_AMANA.png" alt="refernece" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
         <img src="../../PUBLIC/IMAGES/Références/Logos/ANAPEC.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/ANAPEC.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
@@ -62,6 +24,7 @@
         <img src="../../PUBLIC/IMAGES/Références/Logos/MOULOUYA.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/MOULOUYA.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
         <img src="../../PUBLIC/IMAGES/Références/Logos/SMS.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/SMS.png"  onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
     </div>
+</div>
 </body>
     <script>
         function $(id) {

@@ -1,0 +1,36 @@
+.ref-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.references {
+    width: 80%;         
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    line-height: 700px;
+    bottom: 0;
+}
+.references>img {
+    width: 80px;
+    width: 80px;
+    /* animation-name: '';
+    animation-delay: 0s;
+    animation-duration: 1s; */
+}
+/* @keyframes animation_logos {
+    from {
+        width: 100px;
+    }to {
+        width: 130px;
+    }
+} */
+
+.references>img:hover {
+    cursor: pointer;
+}
+.references .back,.references .forward{
+    width: 30px;
+}
