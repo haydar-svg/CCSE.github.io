@@ -8,29 +8,43 @@
     <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
     <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../SERVICES/index.css">
+    <script src="./index.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="rentalHalls">
-        <p class="descriptionText">
-            Nous mettons nos salles à votre disposition
-        </p>
-        <div class="details">
-            <div class="priceDetail">
-                <img src="../../PUBLIC/IMAGES/goodPrice.svg" alt="Desc icon" class="dtailIcon">
-                <p class="detailTitle">
-                    DES TARIFS TRÈS ATTRACTIFS
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> devis instantané sur simple appel
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> reservation à la journée, la semaine ou au mois
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> tarifs dégressifs en fonction de la durée de location
-                </p>
+
+    <div class="rentalHalls" id="rentalHalls">
+    </div>
+    <script>
+        equipementDetail();
+
+        function equipementDetail() {
+            $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/84a206.png)";
+            $('rentalHalls').innerHTML = `
+        <div class="blockTitle">
+            Location de salles
+        </div>
+        <div class="seePictures" onclick="seePictures(this)">
+            <div class="pictureContainer" id="pictureContainer">
+                <span>
+                    voir les images
+                </span>
+                <img src="../../PUBLIC/IMAGES/camera.svg" alt="picture" id="cameraIcon">
+            </div>
+            <div class="salePhoto">
+                <img src="../../PUBLIC/IMAGES/84a206.png" alt="sale photo">
+            </div>
+        </div>
+        <div class="elementContainer">
+            <div class="serviceTitle">
+                DES ÉQUIPEMENTS VARIÉS
+                <p>
+                    Nous disposons de salles équipées et adaptées pour répondre à vos besoins, que vous soyez une entreprise, une association ou un particulier </p>
+                <button class="takeDate">
+                    reserve
+                </button>
             </div>
             <div class="equipementDetails">
                 <img src="../../PUBLIC/IMAGES/tools.svg" alt="Desc icon" class="dtailIcon">
@@ -55,37 +69,142 @@
                 <p class="detailElement">
                     <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> tableau
                 </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 5 à 50 personnes
+                </p>
+                <div class="explore" onclick="breakDetail()">
+                    <img src="../../PUBLIC/IMAGES/chevronSale.svg" alt="see more">
+                </div>
             </div>
-            <div class="featuesDetails">
-                <img src="../../PUBLIC/IMAGES/featureTools.svg" alt="Desc icon" class="dtailIcon">
+        </div>
+            `;
+        }
+
+        function breakDetail() {
+            $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/pc.jpeg)";
+            $('rentalHalls').innerHTML = `
+            <div class="blockTitle">
+                Location de salles
+            </div>
+            <div class="seePictures" onclick="seePictures(this)">
+                <div class="pictureContainer" id="pictureContainer">
+                    <span>
+                        voir les images
+                    </span>
+                    <img src="../../PUBLIC/IMAGES/camera.svg" alt="picture" id="cameraIcon">
+                </div>
+                <div class="salePhoto">
+                    <img src="../../PUBLIC/IMAGES/84a206.png" alt="sale photo">
+                </div>
+            </div>
+            <div class="elementContainer">
+                <div class="serviceTitle">
+                    DIFFÉRENTES BOISSONS
+                    <p>
+                        Nous proposons également une formule pause-café pour
+                        permettre à vos participants de se détendre et de se restaurer
+                        entre les sessions de travail.
+                        Cette formule est adaptée à tous les goûts et répond à vos
+                        besoins en matière de nourriture et de boissons    
+                    </p>
+                    <button class="takeDate">
+                        reserve
+                    </button>
+                </div>
+                <div class="equipementDetails">
+                    <img src="../../PUBLIC/IMAGES/coffee.svg" alt="Desc icon" class="dtailIcon">
+                    <p class="detailTitle">
+                        DIFFÉRENTES BOISSONS
+                    </p>
+                    <p class="detailElement">
+                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">
+                        Boissons chaudes(Café,Thé,Chocolat chaud,Café au lait,etc.)
+                    </p>
+                    <p class="detailElement">
+                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
+                        Boissons Froides(Jus de fruits ( au choix ),Eau,soda,etc.)
+                    </p>
+                    <p class="detailElement">
+                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
+                        Petits pains (croissants, chocolatines, etc.)
+                    </p>
+                    <p class="detailElement">
+                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
+                        Viennoiseries (pains suisse, brioches, etc.)
+                    </p>
+                    <p class="detailElement">
+                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">
+                        Gâteaux Marocains
+                    </p>
+                    <p class="detailElement">
+                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
+                        Des petits salés
+                    </p>
+                    <p class="detailElement">
+                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
+                        Biscuits (sablés, cookies, etc.)
+                    </p>
+                    <div class="explore" onclick="priceDetail()">
+                        <img src="../../PUBLIC/IMAGES/chevronSale.svg" alt="see more">
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+
+        function priceDetail() {
+            $('rentalHalls').style.backgroundImage = "linear-gradient(#00000066, #00000066), url(../../PUBLIC/IMAGES/price.jpeg)";
+            $('rentalHalls').innerHTML = `
+        <div class="blockTitle">
+            Location de salles
+        </div>
+        <div class="seePictures" onclick="seePictures(this)">
+            <div class="pictureContainer" id="pictureContainer">
+                <span>
+                    voir les images
+                </span>
+                <img src="../../PUBLIC/IMAGES/camera.svg" alt="picture" id="cameraIcon">
+            </div>
+            <div class="salePhoto">
+                <img src="../../PUBLIC/IMAGES/84a206.png" alt="sale photo">
+            </div>
+        </div>
+        <div class="elementContainer">
+            <div class="serviceTitle">
+                DES TARIFS TRÈS ATTRACTIFS
+                <p>
+                    Nous sommes également en mesure de personnaliser notre
+                    formule en fonction de vos besoins et de votre budget.
+                </p>
+                <button class="takeDate">
+                    reserve
+                </button>
+            </div>
+            <div class="equipementDetails">
+                <img src="../../PUBLIC/IMAGES/goodPrice.svg" alt="Desc icon" class="dtailIcon">
                 <p class="detailTitle">
-                    DES SERVICES SUR MESURE
+                    DES TARIFS TRÈS ATTRACTIFS
                 </p>
                 <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">acceuil des participants
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">
+                    devis instantané sur simple appel
                 </p>
                 <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> services de photocopies
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
+                    reservation à la journée, la semaine ou au mois
                 </p>
                 <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">configuration de salles sur mesureMESURE
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
+                    tarifs dégressifs en fonction de la durée de location
                 </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> horaires souples
-                </p>
+                <div class="explore" onclick="equipementDetail()">
+                    <img src="../../PUBLIC/IMAGES/chevronSale.svg" alt="see more">
+                </div>
             </div>
         </div>
-        <style>
-
-        </style>
-        <div class="hallsDescriptionContainer">
-            <div class="hallsDescription">
-                explorer
-            </div>
-        </div>
-    </div>
-
-    </div>
+            `;
+        }
+    </script>
 </body>
 
 </html>

@@ -4,41 +4,128 @@
     background-image: linear-gradient(#00000088, #00000081), url(../../PUBLIC/IMAGES/84a206.png);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    margin-top: 60px;
 }
 
-.descriptionText {
-    font-size: 40px;
-    color: #fff;
+.blockTitle {
+    width: auto;
+    font-size: 30px;
     padding-top: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     letter-spacing: 2px;
-    margin-left: 5%;
-    padding-left: 5px;
+    position: absolute;
+    color: #fff;
+    left: 5%;
 }
 
-.details {
+.salePhoto {
+    width: 100%;
+    height: 100%;
+}
+
+.seePictures {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    background: linear-gradient(135deg, rgb(193, 218, 255) 30%, rgba(179, 209, 253, 0.137));
+    top: 40px;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    animation-name: '';
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.pictureContainer {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    border-radius: 5px;
+}
+
+.pictureContainer>span {
+    font-size: 20px;
+    color: #222;
+}
+
+.closeDesign {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 10px;
+    right: 10px;
+    justify-content: center;
+}
+
+@keyframes showPictures {
+    from {
+        width: 250px;
+        height: 50px;
+    }
+    to {
+        width: 90%;
+        height: 640px;
+    }
+}
+
+.elementContainer {
     width: 90%;
-    height: auto;
+    height: 700px;
+    margin-left: 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 5%;
+}
+
+.serviceTitle {
+    width: 50%;
+    font-size: 80px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     flex-wrap: wrap;
 }
 
-.priceDetail,
-.equipementDetails,
-.featuesDetails {
-    width: 330px;
+.serviceTitle>p {
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    padding-right: 20%;
+    font-weight: 400;
+    line-height: 40px;
+    font-family: 'OswaldLight' !important;
+}
+
+.equipementDetails {
     height: auto;
     min-height: 450px;
     border-radius: 5px;
     margin-top: 40px;
     position: relative;
-    background: linear-gradient(135deg, rgb(218, 233, 255) 30%, rgba(179, 209, 253, 0.137));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.884) 30%, rgba(255, 255, 255, 0.055));
     flex-grow: 1;
-    margin: 5px;
     min-width: 300px;
+    position: relative;
 }
 
 .dtailIcon {
@@ -69,72 +156,392 @@
     padding-right: 4px;
 }
 
-.hallsDescriptionContainer {
-    direction: rtl;
-    width: 90%;
-    margin-left: 5%;
+.explore {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-.hallsDescription {
+.explore>img {
+    width: 30px;
+    opacity: 0.8;
+}
+
+.takeDate {
     width: 300px;
     height: 50px;
     font-size: 20px;
     color: #fff;
     border-radius: 5px;
-    background: linear-gradient(135deg, rgb(124, 177, 255), rgba(179, 209, 253, 0));
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 5px;
     cursor: pointer;
+    border: 0;
+    background-color: #387add
 }
 
-@media (max-width:1130px) {
+@media (max-width:1000px) {
     .rentalHalls {
-        height: 900px;
+        height: 700px;
     }
-    .priceDetail {
-        background: linear-gradient(135deg, rgba(179, 209, 253, 0.836), rgb(218, 233, 255));
-    }
-    .priceDetail,
-    .equipementDetails,
-    .featuesDetails {
-        min-height: 380px;
-    }
-    .featuesDetails {
-        height: auto;
-        min-height: auto;
-    }
-    .featuesDetails>p:last-of-type {
+    .blockTitle {
+        font-size: 30px;
+        padding-top: 40px;
         padding-bottom: 30px;
+        left: 5%;
+    }
+    .seePictures {
+        width: 250px;
+        height: 50px;
+        top: 40px;
+        right: 5%;
+    }
+    .pictureContainer {
+        width: 250px;
+        height: 50px;
+    }
+    .pictureContainer>span {
+        font-size: 20px;
+    }
+    .closeDesign {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+    }
+    @keyframes showPictures {
+        from {
+            width: 250px;
+            height: 50px;
+        }
+        to {
+            width: 96%;
+            height: 640px;
+            border-radius: 10px;
+        }
+    }
+    .elementContainer {
+        width: 90%;
+        height: 700px;
+        margin-left: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .serviceTitle {
+        width: 50%;
+        font-size: 60px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .serviceTitle>p {
+        width: 100%;
+        font-size: 18px;
+        padding-right: 10%;
+        line-height: 30px;
+        font-weight: 400;
+    }
+    .equipementDetails {
+        height: auto;
+        min-height: 450px;
+        border-radius: 5px;
+        margin-top: 40px;
+        position: relative;
+        flex-grow: 1;
+        min-width: 300px;
+        position: relative;
+    }
+    .dtailIcon {
+        width: 40px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    .detailTitle {
+        font-size: 23px;
+        padding-top: 0px;
+        padding-left: 15px;
+    }
+    .detailElement {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    .detailElement>img {
+        width: 30px;
+        padding-right: 4px;
+    }
+    .explore {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .explore>img {
+        width: 30px;
+    }
+    .takeDate {
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-right: 5px;
     }
 }
 
-@media (max-width:770px) {
+@media (max-width:700px) {
     .rentalHalls {
-        height: 1350px;
-        background-position: center !important;
+        height: auto;
+        background-position: center;
     }
-    .priceDetail {
-        background: linear-gradient(135deg, rgb(218, 233, 255) 30%, rgba(179, 208, 253, 0.219));
+    .blockTitle {
+        font-size: 30px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        left: 10%;
     }
-    .priceDetail,
-    .equipementDetails,
-    .featuesDetails {
+    .seePictures {
+        width: 50px;
+        height: 50px;
+        top: 40px;
+        right: 10%;
+    }
+    .pictureContainer {
+        width: 50px;
+        height: 50px;
+    }
+    .pictureContainer>span {
+        display: none;
+    }
+    .closeDesign {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+    }
+    @keyframes showPictures {
+        from {
+            width: 50px;
+            height: 50px;
+        }
+        to {
+            width: 80%;
+            height: 600px;
+        }
+    }
+    .elementContainer {
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .serviceTitle {
+        width: 100%;
+        font-size: 60px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 140px;
+    }
+    .serviceTitle>p {
+        width: 100%;
+        font-size: 18px;
+        padding-right: 0%;
+        line-height: 30px;
+        font-weight: 400;
+    }
+    .equipementDetails {
         height: auto;
         min-height: auto;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .priceDetail>p:last-of-type {
-        padding-bottom: 30px;
+        border-radius: 5px;
+        margin-top: 40px;
+        position: relative;
+        flex-grow: 1;
+        margin: 0px;
+        min-width: 300px;
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 50px;
     }
     .equipementDetails>p:last-of-type {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
-    .hallsDescription {
+    .dtailIcon {
+        width: 40px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    .detailTitle {
+        font-size: 23px;
+        padding-top: 0px;
+        padding-left: 15px;
+    }
+    .detailElement {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    .detailElement>img {
+        width: 30px;
+        padding-right: 4px;
+    }
+    .explore {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        right: -25px;
+        top: -25px;
+        transform: translateY(0%);
+    }
+    .explore>img {
+        width: 30px;
+    }
+    .takeDate {
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width:400px) {
+    .rentalHalls {
+        background-position: center;
+    }
+    .blockTitle {
+        font-size: 26px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        left: 3%;
+    }
+    .seePictures {
+        width: 50px;
+        height: 50px;
+        top: 40px;
+        right: 3%;
+    }
+    .pictureContainer {
+        width: 50px;
+        height: 50px;
+    }
+    .pictureContainer>span {
+        display: none;
+    }
+    .closeDesign {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+    }
+    @keyframes showPictures {
+        from {
+            width: 50px;
+            height: 50px;
+        }
+        to {
+            width: 96%;
+            height: 600px;
+        }
+    }
+    .elementContainer {
+        width: 94%;
+        height: auto;
+        margin-left: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .serviceTitle {
         width: 100%;
-        margin-right: 0px;
+        font-size: 50px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+    .serviceTitle>p {
+        width: 100%;
+        font-size: 16px;
+        padding-right: 0%;
+        line-height: 30px;
+        font-weight: 400;
+    }
+    .equipementDetails {
+        height: auto;
+        min-height: auto;
+        border-radius: 5px;
+        margin-top: 40px;
+        position: relative;
+        flex-grow: 1;
+        margin: 0px;
+        min-width: 300px;
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .equipementDetails>p:last-of-type {
+        margin-bottom: 20px;
+    }
+    .dtailIcon {
+        width: 40px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    .detailTitle {
+        font-size: 23px;
+        padding-top: 0px;
+        padding-left: 15px;
+    }
+    .detailElement {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    .detailElement>img {
+        width: 30px;
+        padding-right: 4px;
+    }
+    .explore {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        right: 0px;
+        top: -25px;
+        transform: translateY(0%);
+    }
+    .explore>img {
+        width: 30px;
+    }
+    .takeDate {
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-right: 5px;
     }
 }
