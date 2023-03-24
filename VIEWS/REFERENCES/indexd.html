@@ -9,41 +9,65 @@
     <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
     <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
     <style>
-        .refernces {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .references {
             width: 100%;
-            height: 150px;
-            background-color: #ccc;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: space-around;
+            position: absolute;
+            line-height: 700px;
+            bottom: 0;
         }
         
-        .refernces>img {
-            width: 80px;
-            height: 80px;
-            opacity: 0.8;
+        .references>img {
+            width: 100px;
+            width: 100px;
         }
         
-        .refernces>img:hover {
-            width: 90px;
-            height: 90px;
-            opacity: 1;
+        .references>img:hover {
             cursor: pointer;
+        }
+        
+        .references .back,
+        .references .forward {
+            width: 30px;
         }
     </style>
 </head>
 
 <body>
-    <div class="refernces">
-        <img src="../../PUBLIC/IMAGES/justForTest.svg" alt="refernec">
-        <img src="../../PUBLIC/IMAGES/justForTest.svg" alt="refernec">
-        <img src="../../PUBLIC/IMAGES/justForTest.svg" alt="refernec">
-        <img src="../../PUBLIC/IMAGES/justForTest.svg" alt="refernec">
-        <img src="../../PUBLIC/IMAGES/justForTest.svg" alt="refernec">
-        <img src="../../PUBLIC/IMAGES/justForTest.svg" alt="refernec">
-        <img src="../../PUBLIC/IMAGES/justForTest.svg" alt="refernec">
+    <div class="references">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/AL_AMANA.png" name="../../PUBLIC/IMAGES/Références/AL_AMANA.png" alt="refernece" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/ANAPEC.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/ANAPEC.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/BRICOMA.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/BRICOMA.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/OFPPT.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/OFPPT.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/GIAC.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/GIAC.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/GIAC_TER.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/GIAC_TERTIAIRE.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/InstitutionMoulayIsmail.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/INSTITUTION_MOULAYISMAIL.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/IRRIEST.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/IRRIEST.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/MOULOUYA.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/MOULOUYA.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+        <img src="../../PUBLIC/IMAGES/Références/Logos/SMS.png" alt="refernece" name="../../PUBLIC/IMAGES/Références/SMS.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
     </div>
 </body>
+<script>
+    function $(id) {
+        return document.getElementById(id)
+    }
+
+    function changeImages(event) {
+        var source = event.getAttribute("src")
+        var newsource = event.getAttribute("name")
+        event.setAttribute('src', newsource)
+        event.setAttribute('name', source)
+    }
+</script>
 
 </html>
 
