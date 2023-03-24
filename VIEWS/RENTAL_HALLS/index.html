@@ -9,12 +9,45 @@
     <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="../SERVICES/index.css">
+    <link rel="stylesheet" href="./reservation.css">
     <script src="./index.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-
+    <div class="reservation" id="reservation">
+        <div class="closeReservationContainer" onclick="closeTimeWindow()">
+            <img src="../../PUBLIC/IMAGES/close.svg" alt="close window">
+        </div>
+        <div class="reservationDateTitle">
+            Sélectionnez les jours
+        </div>
+        <div class="date">
+            <div class="startDate">
+                <img src="../../PUBLIC/IMAGES/date.svg" alt="date icon">
+                <p id="startDateContainer">le début</p>
+                <input type="date" name="startDate" id="startDate" onchange="setDateStart(this)">
+            </div>
+            <div class="endDate">
+                <img src="../../PUBLIC/IMAGES/date.svg" alt="date icon">
+                <p id="endDateContainer">la fin</p>
+                <input type="date" name="endDate" id="endDate" onchange="setDateEnd(this)">
+            </div>
+        </div>
+        <div id="period" class="period">
+            <label for="period2">
+                <input type="radio" name="period" id="period2" checked>
+                <span>journée totale</span>
+            </label>
+            <label for="period1">
+                <input type="radio" name="period" id="period1">
+                <span>demi journée</span>
+            </label>
+        </div>
+        <div class="checkButton">
+            vérification
+        </div>
+    </div>
     <div class="rentalHalls" id="rentalHalls">
     </div>
     <script>
@@ -42,7 +75,7 @@
                 DES ÉQUIPEMENTS VARIÉS
                 <p>
                     Nous disposons de salles équipées et adaptées pour répondre à vos besoins, que vous soyez une entreprise, une association ou un particulier </p>
-                <button class="takeDate">
+                <button class="takeDate" onclick="openTimeWindow()">
                     reserve
                 </button>
             </div>
@@ -107,7 +140,7 @@
                         Cette formule est adaptée à tous les goûts et répond à vos
                         besoins en matière de nourriture et de boissons    
                     </p>
-                    <button class="takeDate">
+                    <button class="takeDate" onclick="openTimeWindow()">
                         reserve
                     </button>
                 </div>
@@ -176,7 +209,7 @@
                     Nous sommes également en mesure de personnaliser notre
                     formule en fonction de vos besoins et de votre budget.
                 </p>
-                <button class="takeDate">
+                <button class="takeDate" onclick="openTimeWindow()">
                     reserve
                 </button>
             </div>

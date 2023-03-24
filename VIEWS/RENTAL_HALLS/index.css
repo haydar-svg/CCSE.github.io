@@ -1,11 +1,9 @@
 .rentalHalls {
     width: 100%;
     height: 700px;
-    background-image: linear-gradient(#00000088, #00000081), url(../../PUBLIC/IMAGES/84a206.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-top: 60px;
 }
 
 .blockTitle {

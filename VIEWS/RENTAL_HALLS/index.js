@@ -18,3 +18,21 @@ function hidePictures(element) {
     $('pictureContainer').firstElementChild.innerHTML = 'see pictures';
 
 }
+
+function openTimeWindow() {
+    $('reservation').style.display = "block";
+    $('rentalHalls').style.filter = "blur(2px)";
+}
+
+function closeTimeWindow() {
+    $('reservation').style.display = "none";
+    $('rentalHalls').style.filter = "blur(0px)";
+}
+
+function setDateStart(event) {
+    $('startDateContainer').innerHTML = event.value;
+}
+
+function setDateEnd(event) {
+    $('endDateContainer').innerHTML = event.value;
+}
