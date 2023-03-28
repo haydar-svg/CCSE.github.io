@@ -4,7 +4,7 @@ function $(id) {
 
 function seePictures(element) {
     element.style.animationName = 'showPictures';
-    $('cameraIcon').setAttribute('src', '../../PUBLIC/IMAGES/rentalHalls/close.svg')
+    $('cameraIcon').setAttribute('src', './PUBLIC/IMAGES/rentalHalls/close.svg')
     element.setAttribute('onclick', 'hidePictures(this)')
     $('pictureContainer').classList.add('closeDesign');
     $('pictureContainer').firstElementChild.innerHTML = '';
@@ -12,7 +12,7 @@ function seePictures(element) {
 
 function hidePictures(element) {
     element.style.animationName = '';
-    $('cameraIcon').setAttribute('src', '../../PUBLIC/IMAGES/rentalHalls/camera.svg')
+    $('cameraIcon').setAttribute('src', './PUBLIC/IMAGES/rentalHalls/camera.svg')
     element.setAttribute('onclick', 'seePictures(this)')
     $('pictureContainer').classList.remove('closeDesign');
     $('pictureContainer').firstElementChild.innerHTML = 'see pictures';
@@ -72,7 +72,7 @@ function setDateEnd(event) {
 }
 
 function equipementDetail() {
-    $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/rentalHalls/84a206.png)";
+    $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(./PUBLIC/IMAGES/rentalHalls/84a206.png)";
     $('rentalHalls').innerHTML = `
 <div class="blockTitle">
     Location de salles
@@ -82,10 +82,10 @@ function equipementDetail() {
         <span>
             voir les images
         </span>
-        <img src="../../PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
+        <img src="./PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
     </div>
     <div class="salePhoto">
-        <img src="../../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
+        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
     </div>
 </div>
 <div class="elementContainer">
@@ -98,33 +98,33 @@ function equipementDetail() {
         </button>
     </div>
     <div class="equipementDetails">
-        <img src="../../PUBLIC/IMAGES/rentalHalls/tools.svg" alt="Desc icon" class="dtailIcon">
+        <img src="./PUBLIC/IMAGES/rentalHalls/tools.svg" alt="Desc icon" class="dtailIcon">
         <p class="detailTitle">
             DES ÉQUIPEMENTS VARIÉS
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> matériels audiovisuel
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> matériels audiovisuel
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> vidéo projecteur
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> vidéo projecteur
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> téléviseur
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> téléviseur
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> matériel informatique
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> matériel informatique
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">accès wifi haut débit
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">accès wifi haut débit
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> tableau
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> tableau
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 5 à 50 personnes
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 5 à 50 personnes
         </p>
         <div class="explore" onclick="breakDetail()">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/chevronSale.svg" alt="see more">
+            <img src="./PUBLIC/IMAGES/rentalHalls/chevronSale.svg" alt="see more">
         </div>
     </div>
 </div>
@@ -132,7 +132,7 @@ function equipementDetail() {
 }
 
 function breakDetail() {
-    $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/rentalHalls/pc.jpeg)";
+    $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(./PUBLIC/IMAGES/rentalHalls/pc.jpeg)";
     $('rentalHalls').innerHTML = `
     <div class="blockTitle">
         Location de salles
@@ -142,10 +142,10 @@ function breakDetail() {
             <span>
                 voir les images
             </span>
-            <img src="../../PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
+            <img src="./PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
         </div>
         <div class="salePhoto">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
+            <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
         </div>
     </div>
     <div class="elementContainer">
@@ -163,40 +163,40 @@ function breakDetail() {
             </button>
         </div>
         <div class="equipementDetails">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/coffee.svg" alt="Desc icon" class="dtailIcon">
+            <img src="./PUBLIC/IMAGES/rentalHalls/coffee.svg" alt="Desc icon" class="dtailIcon">
             <p class="detailTitle">
                 DIFFÉRENTES BOISSONS
             </p>
             <p class="detailElement">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">
+                <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">
                 Boissons chaudes(Café,Thé,Chocolat chaud,Café au lait,etc.)
             </p>
             <p class="detailElement">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
+                <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
                 Boissons Froides(Jus de fruits ( au choix ),Eau,soda,etc.)
             </p>
             <p class="detailElement">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
+                <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
                 Petits pains (croissants, chocolatines, etc.)
             </p>
             <p class="detailElement">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
+                <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
                 Viennoiseries (pains suisse, brioches, etc.)
             </p>
             <p class="detailElement">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">
+                <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">
                 Gâteaux Marocains
             </p>
             <p class="detailElement">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
+                <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
                 Des petits salés
             </p>
             <p class="detailElement">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
+                <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
                 Biscuits (sablés, cookies, etc.)
             </p>
             <div class="explore" onclick="priceDetail()">
-                <img src="../../PUBLIC/IMAGES/rentalHalls/chevronSale.svg" alt="see more">
+                <img src="./PUBLIC/IMAGES/rentalHalls/chevronSale.svg" alt="see more">
             </div>
         </div>
     </div>
@@ -204,7 +204,7 @@ function breakDetail() {
 }
 
 function priceDetail() {
-    $('rentalHalls').style.backgroundImage = "linear-gradient(#00000066, #00000066), url(../../PUBLIC/IMAGES/rentalHalls/price.jpeg)";
+    $('rentalHalls').style.backgroundImage = "linear-gradient(#00000066, #00000066), url(./PUBLIC/IMAGES/rentalHalls/price.jpeg)";
     $('rentalHalls').innerHTML = `
 <div class="blockTitle">
     Location de salles
@@ -214,10 +214,10 @@ function priceDetail() {
         <span>
             voir les images
         </span>
-        <img src="../../PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
+        <img src="./PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
     </div>
     <div class="salePhoto">
-        <img src="../../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
+        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
     </div>
 </div>
 <div class="elementContainer">
@@ -232,24 +232,24 @@ function priceDetail() {
         </button>
     </div>
     <div class="equipementDetails">
-        <img src="../../PUBLIC/IMAGES/rentalHalls/goodPrice.svg" alt="Desc icon" class="dtailIcon">
+        <img src="./PUBLIC/IMAGES/rentalHalls/goodPrice.svg" alt="Desc icon" class="dtailIcon">
         <p class="detailTitle">
             DES TARIFS TRÈS ATTRACTIFS
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon">
             devis instantané sur simple appel
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
             reservation à la journée, la semaine ou au mois
         </p>
         <p class="detailElement">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
+            <img src="./PUBLIC/IMAGES/rentalHalls/check.svg" alt="check icon"> 
             tarifs dégressifs en fonction de la durée de location
         </p>
         <div class="explore" onclick="equipementDetail()">
-            <img src="../../PUBLIC/IMAGES/rentalHalls/chevronSale.svg" alt="see more">
+            <img src="./PUBLIC/IMAGES/rentalHalls/chevronSale.svg" alt="see more">
         </div>
     </div>
 </div>
