@@ -1,15 +1,51 @@
-.reservation {
+.completeReservationProcessContainer {
+    width: 100%;
+    height: 100vh;
+    display: none;
     position: fixed;
+    top: 0;
+    z-index: 99999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.justForScrolling {
+    width: 100%;
+    height: 150vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.reservationDateProcess {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.justForScrollingIntoDate {
+    width: 100%;
+    height: 150vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.reservation {
+    position: relative;
     width: 500px;
     height: auto;
     background-color: #fff;
     z-index: 9999;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 200px;
-    filter: blur(0px);
+    top: 100px;
     border-radius: 5px;
-    display: none;
+    display: block;
+    z-index: 99999;
 }
 
 .closeReservationContainer {
@@ -35,6 +71,36 @@
     padding-top: 30px;
     padding-left: 5%;
     color: #444;
+}
+
+.clientPhoneNumber {
+    width: 90%;
+    height: 50px;
+    margin-left: 5%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #edeff2;
+    overflow: hidden;
+}
+
+.clientPhoneNumber>img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.clientPhoneNumber>input {
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    margin: 0;
+    font-size: 20px;
+    color: #555;
+    margin-left: 10px;
+    text-transform: lowercase !important;
 }
 
 .date {
@@ -162,4 +228,238 @@
     width: 20px;
     height: 20px;
     margin-left: 5px;
+}
+
+.dateUnavailable {
+    width: 90%;
+    height: auto;
+    background-color: rgba(255, 0, 0, 0.137);
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    padding: 10px;
+    color: #444;
+}
+
+.divForSpaceAV {
+    width: 100%;
+    height: 20px;
+}
+
+.dateAvailable {
+    width: 90%;
+    height: 40px;
+    background-color: rgba(116, 255, 116, 0.164);
+    border-radius: 5px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    padding: 10px;
+    color: #555;
+}
+
+@media (max-width:550px) {
+    .justForScrollingIntoDate {
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .reservation {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        border-radius: 0px;
+    }
+    .closeReservationContainer {
+        border-radius: 5px;
+        right: 5%;
+        top: 10px;
+    }
+    .reservationDateTitle {
+        padding-top: 80px;
+    }
+    .clientPhoneNumber {
+        height: 40px;
+    }
+    .clientPhoneNumber>img {
+        width: 30px;
+        margin-left: 10px;
+    }
+    .clientPhoneNumber>input {
+        height: 40px;
+        font-size: 18px;
+    }
+    .date {
+        height: 40px;
+    }
+    .startDate,
+    .endDate {
+        width: 49%;
+        height: 40px;
+    }
+    .startDate>img {
+        width: 30px;
+    }
+    .startDate>p {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .endDate>img {
+        width: 30px;
+    }
+    .endDate>p {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .checkButton {
+        width: 90%;
+        height: 45px;
+        border-radius: 5px;
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 5%;
+    }
+}
+
+.completeReservationProcess {
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.closeCompleteReservationProcess {
+    width: 40px;
+    height: 40px;
+    background-color: #c7c7c78e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    cursor: pointer;
+}
+
+.closeCompleteReservationProcess>img {
+    opacity: .8;
+}
+
+.completeReservationTitle {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-left: 5%;
+    color: #444;
+}
+
+.completeProcessLabel {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 5%;
+    color: #666;
+    font-family: 'OswaldLight' !important;
+    font-weight: 600;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.inputContainer {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.iconContainer {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.iconContainer>img {
+    width: 30px;
+}
+
+.completeProcessInput {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    position: relative;
+    display: block;
+    border: none;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #444;
+    text-transform: lowercase !important;
+    letter-spacing: 1px;
+}
+
+.finalReservationButton {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    color: #fff;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width:650px) {
+    .justForScrolling {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .completeReservationProcess {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        top: 0px;
+    }
+    .closeCompleteReservationProcess {
+        border-radius: 5px;
+        right: 5%;
+        top: 10px;
+    }
+    .completeReservationTitle {
+        padding-top: 50px;
+    }
+    .finalReservationButton {
+        width: 90%;
+        height: 45px;
+        margin-left: 5%;
+        border-radius: 5px;
+    }
+    .divForSpace {
+        height: 50px;
+    }
 }

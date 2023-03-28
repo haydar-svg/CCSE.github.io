@@ -15,21 +15,87 @@
 </head>
 
 <body>
+    <div class="completeReservationProcess" id="completeReservationProcess">
+        <div class="closeCompleteReservationProcess" onclick="closeReservationProcess()">
+            <img src="../../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
+        </div>
+        <div class="completeReservationTitle">
+            Sélectionnez les jours
+        </div>
+        <label for="numberOfPeople" class="completeProcessLabel">
+            nomber de personnes
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/groups_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+            </div>
+            <input type="text" id="numberOfPeople" class="completeProcessInput">
+        </div>
+        <label for="breakCoffee" class="completeProcessLabel">
+            pouses  inclus ou non
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/coffee.svg" alt="input icon">
+            </div>
+            <select name="breakCoffee" id="breakCoffee" class="completeProcessInput">
+                <option value="yes"> yes </option>
+                <option value="no"> no </option>
+            </select>
+        </div>
+
+        <label for="equipements" class="completeProcessLabel">
+            equipements
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/featureTools.svg" alt="input icon">
+            </div>
+            <select name="equipements" id="equipements" class="completeProcessInput">
+                <option value="yes"> yes </option>
+                <option value="no"> no </option>
+            </select>
+        </div>
+        <label for="equipements" class="completeProcessLabel">
+            coordones
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/badge_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+            </div>
+            <select name="equipements" id="equipements" class="completeProcessInput">
+                <option value="yes"> personne physique </option>
+                <option value="no"> societe </option>
+            </select>
+        </div>
+        <label for="numberOfPeople" class="completeProcessLabel">
+            objet de location
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/emoji_objects_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+            </div>
+            <input type="text" id="numberOfPeople" class="completeProcessInput">
+        </div>
+        <div class="finalReservationButton">
+            reservation
+        </div>
+    </div>
     <div class="reservation" id="reservation">
         <div class="closeReservationContainer" onclick="closeTimeWindow()">
-            <img src="../../PUBLIC/IMAGES/close.svg" alt="close window">
+            <img src="../../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
         </div>
         <div class="reservationDateTitle">
             Sélectionnez les jours
         </div>
         <div class="date">
             <div class="startDate">
-                <img src="../../PUBLIC/IMAGES/date.svg" alt="date icon">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
                 <p id="startDateContainer">le début</p>
                 <input type="date" name="startDate" id="startDate" onchange="setDateStart(this)">
             </div>
             <div class="endDate">
-                <img src="../../PUBLIC/IMAGES/date.svg" alt="date icon">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
                 <p id="endDateContainer">la fin</p>
                 <input type="date" name="endDate" id="endDate" onchange="setDateEnd(this)">
             </div>
@@ -44,7 +110,10 @@
                 <span>demi journée</span>
             </label>
         </div>
-        <div class="checkButton">
+        <div class="dateUnavailable">
+            Malheureusement, la salle n'est pas disponible à la date que vous avez indiquée
+        </div>
+        <div class="checkButton" onclick="openReservationProcess()">
             vérification
         </div>
     </div>
@@ -52,192 +121,9 @@
     </div>
     <script>
         equipementDetail();
-
-        function equipementDetail() {
-            $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/84a206.png)";
-            $('rentalHalls').innerHTML = `
-        <div class="blockTitle">
-            Location de salles
-        </div>
-        <div class="seePictures" onclick="seePictures(this)">
-            <div class="pictureContainer" id="pictureContainer">
-                <span>
-                    voir les images
-                </span>
-                <img src="../../PUBLIC/IMAGES/camera.svg" alt="picture" id="cameraIcon">
-            </div>
-            <div class="salePhoto">
-                <img src="../../PUBLIC/IMAGES/84a206.png" alt="sale photo">
-            </div>
-        </div>
-        <div class="elementContainer">
-            <div class="serviceTitle">
-                DES ÉQUIPEMENTS VARIÉS
-                <p>
-                    Nous disposons de salles équipées et adaptées pour répondre à vos besoins, que vous soyez une entreprise, une association ou un particulier </p>
-                <button class="takeDate" onclick="openTimeWindow()">
-                    reserve
-                </button>
-            </div>
-            <div class="equipementDetails">
-                <img src="../../PUBLIC/IMAGES/tools.svg" alt="Desc icon" class="dtailIcon">
-                <p class="detailTitle">
-                    DES ÉQUIPEMENTS VARIÉS
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> matériels audiovisuel
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> vidéo projecteur
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> téléviseur
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> matériel informatique
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">accès wifi haut débit
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> tableau
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 5 à 50 personnes
-                </p>
-                <div class="explore" onclick="breakDetail()">
-                    <img src="../../PUBLIC/IMAGES/chevronSale.svg" alt="see more">
-                </div>
-            </div>
-        </div>
-            `;
-        }
-
-        function breakDetail() {
-            $('rentalHalls').style.backgroundImage = "linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/pc.jpeg)";
-            $('rentalHalls').innerHTML = `
-            <div class="blockTitle">
-                Location de salles
-            </div>
-            <div class="seePictures" onclick="seePictures(this)">
-                <div class="pictureContainer" id="pictureContainer">
-                    <span>
-                        voir les images
-                    </span>
-                    <img src="../../PUBLIC/IMAGES/camera.svg" alt="picture" id="cameraIcon">
-                </div>
-                <div class="salePhoto">
-                    <img src="../../PUBLIC/IMAGES/84a206.png" alt="sale photo">
-                </div>
-            </div>
-            <div class="elementContainer">
-                <div class="serviceTitle">
-                    DIFFÉRENTES BOISSONS
-                    <p>
-                        Nous proposons également une formule pause-café pour
-                        permettre à vos participants de se détendre et de se restaurer
-                        entre les sessions de travail.
-                        Cette formule est adaptée à tous les goûts et répond à vos
-                        besoins en matière de nourriture et de boissons    
-                    </p>
-                    <button class="takeDate" onclick="openTimeWindow()">
-                        reserve
-                    </button>
-                </div>
-                <div class="equipementDetails">
-                    <img src="../../PUBLIC/IMAGES/coffee.svg" alt="Desc icon" class="dtailIcon">
-                    <p class="detailTitle">
-                        DIFFÉRENTES BOISSONS
-                    </p>
-                    <p class="detailElement">
-                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">
-                        Boissons chaudes(Café,Thé,Chocolat chaud,Café au lait,etc.)
-                    </p>
-                    <p class="detailElement">
-                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
-                        Boissons Froides(Jus de fruits ( au choix ),Eau,soda,etc.)
-                    </p>
-                    <p class="detailElement">
-                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
-                        Petits pains (croissants, chocolatines, etc.)
-                    </p>
-                    <p class="detailElement">
-                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
-                        Viennoiseries (pains suisse, brioches, etc.)
-                    </p>
-                    <p class="detailElement">
-                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">
-                        Gâteaux Marocains
-                    </p>
-                    <p class="detailElement">
-                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
-                        Des petits salés
-                    </p>
-                    <p class="detailElement">
-                        <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
-                        Biscuits (sablés, cookies, etc.)
-                    </p>
-                    <div class="explore" onclick="priceDetail()">
-                        <img src="../../PUBLIC/IMAGES/chevronSale.svg" alt="see more">
-                    </div>
-                </div>
-            </div>
-            `;
-        }
-
-        function priceDetail() {
-            $('rentalHalls').style.backgroundImage = "linear-gradient(#00000066, #00000066), url(../../PUBLIC/IMAGES/price.jpeg)";
-            $('rentalHalls').innerHTML = `
-        <div class="blockTitle">
-            Location de salles
-        </div>
-        <div class="seePictures" onclick="seePictures(this)">
-            <div class="pictureContainer" id="pictureContainer">
-                <span>
-                    voir les images
-                </span>
-                <img src="../../PUBLIC/IMAGES/camera.svg" alt="picture" id="cameraIcon">
-            </div>
-            <div class="salePhoto">
-                <img src="../../PUBLIC/IMAGES/84a206.png" alt="sale photo">
-            </div>
-        </div>
-        <div class="elementContainer">
-            <div class="serviceTitle">
-                DES TARIFS TRÈS ATTRACTIFS
-                <p>
-                    Nous sommes également en mesure de personnaliser notre
-                    formule en fonction de vos besoins et de votre budget.
-                </p>
-                <button class="takeDate" onclick="openTimeWindow()">
-                    reserve
-                </button>
-            </div>
-            <div class="equipementDetails">
-                <img src="../../PUBLIC/IMAGES/goodPrice.svg" alt="Desc icon" class="dtailIcon">
-                <p class="detailTitle">
-                    DES TARIFS TRÈS ATTRACTIFS
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon">
-                    devis instantané sur simple appel
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
-                    reservation à la journée, la semaine ou au mois
-                </p>
-                <p class="detailElement">
-                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> 
-                    tarifs dégressifs en fonction de la durée de location
-                </p>
-                <div class="explore" onclick="equipementDetail()">
-                    <img src="../../PUBLIC/IMAGES/chevronSale.svg" alt="see more">
-                </div>
-            </div>
-        </div>
-            `;
-        }
     </script>
 </body>
+
+</html>
 
 </html>

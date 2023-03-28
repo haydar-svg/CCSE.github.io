@@ -7,146 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
     <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="./index.css">
     <title>Document</title>
-    <style>
-        footer {
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(0deg, #a6aadba1 10%, rgba(255, 255, 255, 0));
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-        }
-        
-        .sendMessageForm {
-            width: 45%;
-            height: 400px;
-            /* background-color: #fff; */
-        }
-        
-        .formTitle {
-            color: #222;
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
-        
-        .label {
-            color: #444;
-            font-size: 16px;
-            text-transform: lowercase !important;
-            padding-top: 30px;
-            font-family: 'OswaldLight' !important;
-        }
-        
-        input {
-            width: 80%;
-            height: 45px;
-            margin-top: 5px;
-            border-radius: 5px;
-            background-color: #eee;
-            border: 2px #777 solid;
-            padding-left: 5px;
-            font-size: 22px;
-            letter-spacing: 2px;
-            color: #333;
-        }
-        
-        textarea {
-            width: 80%;
-            min-width: 80%;
-            max-width: 80%;
-            min-height: 45px;
-            max-height: 250px;
-            height: 100px;
-            margin-top: 5px;
-            border-radius: 5px;
-            background-color: #eee;
-            border: 2px #777 solid;
-            padding-left: 5px;
-            font-size: 22px;
-            letter-spacing: 2px;
-            color: #333;
-        }
-        
-        .sendButton {
-            width: 80%;
-            height: 45px;
-            border: 0;
-            background-color: blue;
-            color: #fff;
-            font-size: 22px;
-            border-radius: 5px;
-            margin-top: 40px;
-        }
-        
-        .contactMethod {
-            width: 45%;
-            height: 400px;
-        }
-        
-        .contactMethodTitle {
-            color: #222;
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
-        
-        .methodContainer {
-            width: 80%;
-            height: 45px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            margin-top: 30px;
-            cursor: pointer;
-        }
-        
-        .methodContainer>img {
-            width: 40px;
-        }
-        
-        .methodContainer>p {
-            font-size: 20px;
-            color: #222;
-            letter-spacing: 2px;
-            font-family: 'OswaldLight' !important;
-            text-transform: lowercase;
-        }
-    </style>
 </head>
 
 <body>
     <footer>
-        <div class="sendMessageForm">
-            <div class="formTitle">
-                send message
-            </div>
-            <div class="label">
-                full name
-            </div>
-            <input type="text">
-            <div class="label">
-                email
-            </div>
-            <input type="text">
-            <div class="label">
-                message
-            </div>
-            <textarea></textarea>
-            <button class="sendButton">
-                send
+        <div class="footerElementsContainer">
+            <div class="sendMessageForm">
+                <div class="formTitle">
+                    envoyer un message
+                </div>
+                <div class="label">
+                    le nom complet *
+                </div>
+                <input type="text">
+                <div class="label">
+                    email *
+                </div>
+                <input type="text">
+                <div class="label">
+                    le message *
+                </div>
+                <textarea></textarea>
+                <button class="sendButton">
+                    Envoyer 
             </button>
-        </div>
-        <div class="contactMethod">
-            <div class="contactMethodTitle">
-                contact us
             </div>
-            <div class="methodContainer">
-                <img src="../../PUBLIC/IMAGES/camera.svg" alt="" class="methodIcon">
-                <p class="methodText">
-                    haydar mostafa ,acebook .com
-                </p>
+            <div class="locationAPI">
+                <div class="locationAPITitle">
+                    Localisation géographique
+                </div>
+                <div class="locationByText">
+                    <div class="locationIcon">
+                        <img src="../../PUBLIC/IMAGES/footer/location.svg" alt="location icon">
+                    </div>
+                    <div class="locationPara">
+                        BOULEVARD MOHAMMED DERFOUFI, IMMEUBLE HIMRI, 3ÈME ÉTAGE N°5, 60000 OUJDA-MAROC
+                    </div>
+                </div>
+                <div class="locationByAPI">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.965179389678!2d-1.9177607148547438!3d34.68082828043965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7865bba6c03af9%3A0x55e3a56a49a1ba7!2sCabinet%20de%20consulting%20et%20services%20aux%20Entreprises%20CCSE!5e0!3m2!1sar!2sma!4v1679811574668!5m2!1sar!2sma"
+                        width="100%" height="100%" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contactMethod">
+                <div class="contactMethodTitle">
+                    Contactez nous
+                </div>
+                <div class="methods">
+                    <div class="methodContainer">
+                        <img src="../../PUBLIC/IMAGES/footer/email.svg" alt="" class="methodIcon">
+                        <p class="methodText">
+                            CABINETCCSE@GMAIL.COM
+                        </p>
+                    </div>
+                    <div class="methodContainer">
+                        <img src="../../PUBLIC/IMAGES/footer/phone.svg" alt="" class="methodIcon">
+                        <p class="methodText">
+                            0536681122 / 0661396051
+                        </p>
+                    </div>
+                    <div class="methodContainer">
+                        <img src="../../PUBLIC/IMAGES/footer/facebook.svg" alt="" class="methodIcon">
+                        <p class="methodText">
+                            CCSE CONSULTING
+                        </p>
+                    </div>
+                    <div class="methodContainer">
+                        <img src="../../PUBLIC/IMAGES/footer/instagram.svg" alt="" class="methodIcon">
+                        <p class="methodText">
+                            CCSE.CONSULTING
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
+
     </footer>
 </body>
 

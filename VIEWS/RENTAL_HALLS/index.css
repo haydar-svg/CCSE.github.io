@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-top: 100px;
 }
 
 .blockTitle {
@@ -57,7 +58,7 @@
 
 .pictureContainer>span {
     font-size: 20px;
-    color: #222;
+    color: #23364d;
 }
 
 .closeDesign {
@@ -75,10 +76,15 @@
     from {
         width: 250px;
         height: 50px;
+        top: 40px;
+        right: 5%;
     }
     to {
-        width: 90%;
-        height: 640px;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        right: 0%;
+        border-radius: 0;
     }
 }
 
@@ -134,14 +140,14 @@
 
 .detailTitle {
     font-size: 25px;
-    color: #333;
+    color: #23364d;
     padding-top: 0px;
     padding-left: 15px;
 }
 
 .detailElement {
     font-size: 18px;
-    color: #333;
+    color: #23364d;
     padding-top: 10px;
     padding-left: 15px;
     display: flex;
@@ -218,17 +224,6 @@
         height: 30px;
         top: 10px;
         right: 10px;
-    }
-    @keyframes showPictures {
-        from {
-            width: 250px;
-            height: 50px;
-        }
-        to {
-            width: 96%;
-            height: 640px;
-            border-radius: 10px;
-        }
     }
     .elementContainer {
         width: 90%;
@@ -332,16 +327,6 @@
         height: 30px;
         top: 10px;
         right: 10px;
-    }
-    @keyframes showPictures {
-        from {
-            width: 50px;
-            height: 50px;
-        }
-        to {
-            width: 80%;
-            height: 600px;
-        }
     }
     .elementContainer {
         width: 80%;
@@ -452,16 +437,6 @@
         height: 30px;
         top: 10px;
         right: 10px;
-    }
-    @keyframes showPictures {
-        from {
-            width: 50px;
-            height: 50px;
-        }
-        to {
-            width: 96%;
-            height: 600px;
-        }
     }
     .elementContainer {
         width: 94%;

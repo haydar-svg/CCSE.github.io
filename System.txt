@@ -1,7 +1,0 @@
-our font:oswald;
-1st colors:#333; 
-    font-weight:600;
-2st colors:#444;
-    font-weight:400;
-3st colors:#666;
-    font-weight:400;

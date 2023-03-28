@@ -1,0 +1,1144 @@
+nav {
+    width: 100%;
+    height: 90px;
+    display: flex;
+}
+
+.logo {
+    margin-left: 5%;
+    height: 55px;
+    padding-top: 10px;
+}
+
+.logo>img {
+    height: 55px;
+}
+
+@media (max-width:500px) {
+    .logo {
+        margin-left: 3%;
+    }
+}
+
+
+/* .,,,,,,*/
+
+.firstBlockBackground {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-color: #f1f1f1;
+}
+
+.landingPageContainer {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.landingPageDescriptionContainer {
+    width: 400px;
+    height: auto;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 40px;
+    color: #23364d;
+    letter-spacing: 2px;
+}
+
+.companyDescription {
+    font-size: 22px;
+    color: #23364d;
+    font-family: 'OswaldLight' !important;
+    line-height: 40px;
+    padding-right: 10%;
+    text-transform: lowercase !important;
+}
+
+.landingPageDesignContainer {
+    width: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.subContainer {
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+
+.designElement0 {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    position: absolute;
+    z-index: 2;
+    left: 150px;
+    top: 0;
+    animation-name: anim3;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.designElement0>img {
+    width: 100%;
+}
+
+.designElement1 {
+    width: 200px;
+    height: 300px;
+    right: 50px;
+    top: 150px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0.8;
+    animation-name: anim2;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.designElement1>img {
+    width: 100%;
+}
+
+.designElement2 {
+    width: 200px;
+    height: 300px;
+    left: 0px;
+    top: 40px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0.8;
+    animation-name: anim1;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease;
+}
+
+.designElement2>img {
+    width: 100%;
+}
+
+.designElement3 {
+    width: 240px;
+    height: 100px;
+    left: 0px;
+    top: 350px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 22px;
+    font-family: 'OswaldLight' !important;
+    font-weight: 600;
+    color: #23364d;
+}
+
+.designElement3::after {
+    content: '';
+    animation-name: changeText;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease;
+}
+
+.designElement4 {
+    width: 90px;
+    height: 140px;
+    left: 360px;
+    top: 0px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 50px;
+    font-family: 'OswaldLight' !important;
+    font-weight: 600;
+    color: #23364d;
+    flex-wrap: wrap;
+}
+
+.designElement4>span {
+    font-size: 16px;
+}
+
+.designElement5 {
+    width: 140px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 20px;
+    font-family: 'OswaldLight' !important;
+    font-weight: 600;
+    color: #23364d;
+    flex-wrap: wrap;
+    letter-spacing: 3px;
+}
+
+.designElement6 {
+    width: 200px;
+    height: 300px;
+    left: -100px;
+    top: -50px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.designElement7 {
+    width: 200px;
+    height: 300px;
+    right: -100px;
+    top: 50px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.designElement8 {
+    width: 50px;
+    height: 50px;
+    right: -50px;
+    top: -50px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.designElement9 {
+    width: 100px;
+    height: 100px;
+    left: 150px;
+    bottom: -50px;
+    background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+@keyframes changeText {
+    0% {
+        content: 'digitales';
+    }
+    33% {
+        content: 'expérience';
+    }
+    66% {
+        content: 'professionnel';
+    }
+    100% {
+        content: 'digitales';
+    }
+}
+
+
+/* ////////////// */
+
+@keyframes anim1 {
+    0% {
+        opacity: 0.8;
+        left: 0px;
+        top: 40px;
+        z-index: 1;
+        filter: blur(2px);
+    }
+    16.6% {
+        opacity: 1;
+        left: 150px;
+        top: 0px;
+        z-index: 2;
+        filter: blur(0px);
+    }
+    33.2% {
+        opacity: 1;
+        left: 150px;
+        top: 0px;
+        z-index: 2;
+        filter: blur(0px);
+    }
+    49.9% {
+        opacity: 0.8;
+        top: 150px;
+        z-index: 1;
+        left: 250px;
+        filter: blur(2px);
+    }
+    66.5% {
+        opacity: 0.8;
+        top: 150px;
+        z-index: 1;
+        left: 250px;
+        filter: blur(2px);
+    }
+    83.1% {
+        opacity: 0.8;
+        left: 0px;
+        top: 40px;
+        z-index: 1;
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 0.8;
+        left: 0px;
+        top: 40px;
+        z-index: 1;
+        filter: blur(2px);
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        opacity: 0.8;
+        top: 150px;
+        z-index: 1;
+        left: 250px;
+        filter: blur(2px);
+    }
+    16.6% {
+        opacity: 0.8;
+        left: 0px;
+        top: 40px;
+        z-index: 1;
+        filter: blur(2px);
+    }
+    33.2% {
+        opacity: 0.8;
+        left: 0px;
+        top: 40px;
+        z-index: 1;
+        filter: blur(2px);
+    }
+    49.9% {
+        opacity: 1;
+        left: 150px;
+        top: 0px;
+        z-index: 2;
+        filter: blur(0px);
+    }
+    66.5% {
+        opacity: 1;
+        left: 150px;
+        top: 0px;
+        z-index: 2;
+        filter: blur(0px);
+    }
+    83.1% {
+        opacity: 0.8;
+        top: 150px;
+        z-index: 1;
+        left: 250px;
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 0.8;
+        top: 150px;
+        z-index: 1;
+        left: 250px;
+        filter: blur(2px);
+    }
+}
+
+@keyframes anim3 {
+    0% {
+        opacity: 1;
+        left: 150px;
+        top: 0px;
+        z-index: 2;
+        filter: blur(0px);
+    }
+    16.6% {
+        opacity: 0.8;
+        top: 150px;
+        z-index: 1;
+        left: 250px;
+        filter: blur(2px);
+    }
+    33.2% {
+        opacity: 0.8;
+        top: 150px;
+        z-index: 1;
+        left: 250px;
+        filter: blur(2px);
+    }
+    49.9% {
+        opacity: 0.8;
+        left: 0px;
+        top: 40px;
+        z-index: 1;
+        filter: blur(2px);
+    }
+    66.5% {
+        opacity: 0.8;
+        left: 0px;
+        top: 40px;
+        z-index: 1;
+        filter: blur(2px);
+    }
+    83.1% {
+        opacity: 1;
+        left: 150px;
+        top: 0px;
+        z-index: 2;
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 1;
+        left: 150px;
+        top: 0px;
+        z-index: 2;
+        filter: blur(0px);
+    }
+}
+
+@media (max-width:900px) {
+    .landingPageDescriptionContainer {
+        width: 300px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .companyDescription {
+        font-size: 22px;
+        line-height: 30px;
+        padding-right: 5%;
+    }
+    .landingPageDesignContainer {
+        width: 350px;
+    }
+    .subContainer {
+        width: 350px;
+        height: 350px;
+    }
+    .designElement0 {
+        width: 150px;
+        height: 250px;
+        left: 100px;
+        top: 0;
+    }
+    .designElement1 {
+        width: 150px;
+        height: 250px;
+        left: 200px;
+        top: 0px;
+    }
+    .designElement2 {
+        width: 150px;
+        height: 250px;
+        left: 0px;
+        top: 40px;
+    }
+    .designElement3 {
+        width: 190px;
+        height: 50px;
+        left: 0px;
+        top: 300px;
+    }
+    .designElement4 {
+        width: 90px;
+        height: 90px;
+        left: 260px;
+        top: 0px;
+    }
+    .designElement5 {
+        width: 90px;
+        height: 30px;
+        left: 0px;
+        top: 0px;
+    }
+    @keyframes anim1 {
+        0% {
+            left: 0px;
+            top: 40px;
+        }
+        16.6% {
+            left: 100px;
+            top: 0px;
+        }
+        33.2% {
+            left: 100px;
+            top: 0px;
+        }
+        49.9% {
+            top: 100px;
+            left: 200px;
+        }
+        66.5% {
+            top: 100px;
+            left: 200px;
+        }
+        83.1% {
+            left: 0px;
+            top: 40px;
+        }
+        100% {
+            left: 0px;
+            top: 40px;
+        }
+    }
+    @keyframes anim2 {
+        0% {
+            top: 100px;
+            left: 200px;
+        }
+        16.6% {
+            left: 0px;
+            top: 40px;
+        }
+        33.2% {
+            left: 0px;
+            top: 40px;
+        }
+        49.9% {
+            left: 100px;
+            top: 0px;
+        }
+        66.5% {
+            left: 100px;
+            top: 0px;
+        }
+        83.1% {
+            top: 100px;
+            left: 200px;
+        }
+        100% {
+            top: 100px;
+            left: 200px;
+        }
+    }
+    @keyframes anim3 {
+        0% {
+            left: 100px;
+            top: 0px;
+        }
+        16.6% {
+            top: 100px;
+            left: 200px;
+        }
+        33.2% {
+            top: 100px;
+            left: 200px;
+        }
+        49.9% {
+            left: 0px;
+            top: 40px;
+        }
+        66.5% {
+            left: 0px;
+            top: 40px;
+        }
+        83.1% {
+            left: 100px;
+            top: 0px;
+        }
+        100% {
+            left: 100px;
+            top: 0px;
+        }
+    }
+}
+
+@media (max-width:730px) {
+    .landingPageContainer {
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 5%;
+        flex-wrap: wrap;
+    }
+    .landingPageDescriptionContainer {
+        width: 100%;
+        height: auto;
+        flex-grow: 1;
+    }
+    .title {
+        font-size: 40px;
+        color: #23364d;
+        letter-spacing: 2px;
+    }
+    .companyDescription {
+        font-size: 22px;
+        color: #23364d;
+        font-family: 'OswaldLight' !important;
+        line-height: 40px;
+        padding-right: 10%;
+    }
+    .landingPageDesignContainer {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .subContainer {
+        width: 450px;
+        height: 450px;
+        position: relative;
+    }
+    .designElement0 {
+        width: 200px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 5px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+        position: absolute;
+        z-index: 2;
+        left: 150px;
+        top: 0;
+        animation-name: anim3;
+        animation-duration: 15s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    .designElement0>img {
+        width: 100%;
+    }
+    .designElement1 {
+        width: 200px;
+        height: 300px;
+        right: 50px;
+        top: 150px;
+        background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+        opacity: 0.8;
+        animation-name: anim2;
+        animation-duration: 15s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    .designElement1>img {
+        width: 100%;
+    }
+    .designElement2 {
+        width: 200px;
+        height: 300px;
+        left: 0px;
+        top: 40px;
+        background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+        opacity: 0.8;
+        animation-name: anim1;
+        animation-duration: 15s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        transition-timing-function: ease;
+    }
+    .designElement2>img {
+        width: 100%;
+    }
+    .designElement3 {
+        width: 240px;
+        height: 100px;
+        left: 0px;
+        top: 350px;
+        background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+        border-radius: 5px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        font-size: 22px;
+        font-family: 'OswaldLight' !important;
+        font-weight: 600;
+        color: #23364d;
+    }
+    .designElement3::after {
+        content: '';
+        animation-name: changeText;
+        animation-duration: 15s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        transition-timing-function: ease;
+    }
+    .designElement4 {
+        width: 90px;
+        height: 140px;
+        left: 360px;
+        top: 0px;
+        background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+        border-radius: 5px;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+        font-size: 50px;
+        font-family: 'OswaldLight' !important;
+        font-weight: 600;
+        color: #23364d;
+        flex-wrap: wrap;
+    }
+    .designElement4>span {
+        font-size: 16px;
+    }
+    .designElement5 {
+        width: 140px;
+        height: 30px;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(135deg, rgb(221, 221, 221) 30%, rgba(255, 255, 255, 0.3));
+        border-radius: 5px;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+        font-size: 20px;
+        font-family: 'OswaldLight' !important;
+        font-weight: 600;
+        color: #23364d;
+        flex-wrap: wrap;
+        letter-spacing: 3px;
+    }
+    @keyframes changeText {
+        0% {
+            content: 'digitales';
+        }
+        33% {
+            content: 'expérience';
+        }
+        66% {
+            content: 'professionnel';
+        }
+        100% {
+            content: 'digitales';
+        }
+    }
+    /* ////////////// */
+    @keyframes anim1 {
+        0% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        16.6% {
+            opacity: 1;
+            left: 150px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        33.2% {
+            opacity: 1;
+            left: 150px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        49.9% {
+            opacity: 0.8;
+            top: 150px;
+            z-index: 1;
+            left: 250px;
+            filter: blur(2px);
+        }
+        66.5% {
+            opacity: 0.8;
+            top: 150px;
+            z-index: 1;
+            left: 250px;
+            filter: blur(2px);
+        }
+        83.1% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        100% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+    }
+    @keyframes anim2 {
+        0% {
+            opacity: 0.8;
+            top: 150px;
+            z-index: 1;
+            left: 250px;
+            filter: blur(2px);
+        }
+        16.6% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        33.2% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        49.9% {
+            opacity: 1;
+            left: 150px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        66.5% {
+            opacity: 1;
+            left: 150px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        83.1% {
+            opacity: 0.8;
+            top: 150px;
+            z-index: 1;
+            left: 250px;
+            filter: blur(2px);
+        }
+        100% {
+            opacity: 0.8;
+            top: 150px;
+            z-index: 1;
+            left: 250px;
+            filter: blur(2px);
+        }
+    }
+    @keyframes anim3 {
+        0% {
+            opacity: 1;
+            left: 150px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        16.6% {
+            opacity: 0.8;
+            top: 150px;
+            z-index: 1;
+            left: 250px;
+            filter: blur(2px);
+        }
+        33.2% {
+            opacity: 0.8;
+            top: 150px;
+            z-index: 1;
+            left: 250px;
+            filter: blur(2px);
+        }
+        49.9% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        66.5% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        83.1% {
+            opacity: 1;
+            left: 150px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        100% {
+            opacity: 1;
+            left: 150px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .landingPageContainer {
+        width: 94%;
+        margin-left: 3%;
+    }
+    .landingPageDescriptionContainer {
+        width: 100%;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .companyDescription {
+        font-size: 20px;
+        line-height: 30px;
+        padding-right: 5%;
+    }
+    .landingPageDesignContainer {
+        width: 100%;
+    }
+    .subContainer {
+        width: 350px;
+        height: 350px;
+    }
+    .designElement0 {
+        width: 150px;
+        height: 250px;
+        left: 100px;
+        top: 0;
+    }
+    .designElement1 {
+        width: 150px;
+        height: 250px;
+        left: 200px;
+        top: 0px;
+    }
+    .designElement2 {
+        width: 150px;
+        height: 250px;
+        left: 0px;
+        top: 40px;
+    }
+    .designElement3 {
+        width: 190px;
+        height: 50px;
+        left: 0px;
+        top: 300px;
+    }
+    .designElement4 {
+        width: 90px;
+        height: 90px;
+        left: 260px;
+        top: 0px;
+    }
+    .designElement5 {
+        width: 90px;
+        height: 30px;
+        left: 0px;
+        top: 0px;
+    }
+    @keyframes anim1 {
+        0% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        16.6% {
+            opacity: 1;
+            left: 100px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        33.2% {
+            opacity: 1;
+            left: 100px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        49.9% {
+            opacity: 0.8;
+            top: 100px;
+            z-index: 1;
+            left: 200px;
+            filter: blur(2px);
+        }
+        66.5% {
+            opacity: 0.8;
+            top: 100px;
+            z-index: 1;
+            left: 200px;
+            filter: blur(2px);
+        }
+        83.1% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        100% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+    }
+    @keyframes anim2 {
+        0% {
+            opacity: 0.8;
+            top: 100px;
+            z-index: 1;
+            left: 200px;
+            filter: blur(2px);
+        }
+        16.6% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        33.2% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        49.9% {
+            opacity: 1;
+            left: 100px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        66.5% {
+            opacity: 1;
+            left: 100px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        83.1% {
+            opacity: 0.8;
+            top: 100px;
+            z-index: 1;
+            left: 200px;
+            filter: blur(2px);
+        }
+        100% {
+            opacity: 0.8;
+            top: 100px;
+            z-index: 1;
+            left: 200px;
+            filter: blur(2px);
+        }
+    }
+    @keyframes anim3 {
+        0% {
+            opacity: 1;
+            left: 100px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        16.6% {
+            opacity: 0.8;
+            top: 100px;
+            z-index: 1;
+            left: 200px;
+            filter: blur(2px);
+        }
+        33.2% {
+            opacity: 0.8;
+            top: 100px;
+            z-index: 1;
+            left: 200px;
+            filter: blur(2px);
+        }
+        49.9% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        66.5% {
+            opacity: 0.8;
+            left: 0px;
+            top: 40px;
+            z-index: 1;
+            filter: blur(2px);
+        }
+        83.1% {
+            opacity: 1;
+            left: 100px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+        100% {
+            opacity: 1;
+            left: 100px;
+            top: 0px;
+            z-index: 2;
+            filter: blur(0px);
+        }
+    }
+}
