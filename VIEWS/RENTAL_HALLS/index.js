@@ -26,7 +26,6 @@ function openTimeWindow(event) {
     $('servicesTitle').style.filter = "blur(2px)";
     $('services').style.filter = "blur(2px)";
     $('rentalHalls').style.filter = "blur(2px)";
-    $('referencesTitle').style.filter = "blur(2px)";
     $('references').style.filter = "blur(2px)";
     $('footer').style.filter = "blur(2px)";
 }
@@ -38,7 +37,6 @@ function closeTimeWindow(event) {
     $('servicesTitle').style.filter = "blur(0px)";
     $('services').style.filter = "blur(0px)";
     $('rentalHalls').style.filter = "blur(0px)";
-    $('referencesTitle').style.filter = "blur(0px)";
     $('references').style.filter = "blur(0px)";
     $('footer').style.filter = "blur(0px)";
     $('nav').removeAttribute('style');
@@ -57,7 +55,6 @@ function closeReservationProcess(event) {
     $('servicesTitle').style.filter = "blur(0px)";
     $('services').style.filter = "blur(0px)";
     $('rentalHalls').style.filter = "blur(0px)";
-    $('referencesTitle').style.filter = "blur(0px)";
     $('references').style.filter = "blur(0px)";
     $('footer').style.filter = "blur(0px)";
     $('nav').removeAttribute('style');

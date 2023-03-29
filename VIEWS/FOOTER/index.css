@@ -1,294 +1,122 @@
 footer {
-    margin-top: 100px;
-    overflow: hidden;
     width: 100%;
-    height: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../PUBLIC/IMAGES/rentalHalls/84a206.png);
-}
-
-.footerElementsContainer {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 40px;
+    height: 140px;
+    background-color: #f1f1f1;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.sendMessageForm {
-    width: 45%;
-    height: 500px;
     position: relative;
+    margin-top: 50px;
 }
 
-.formTitle {
-    color: #fff;
-    font-size: 22px;
-    letter-spacing: 2px;
-}
-
-.label {
-    color: #fff;
-    font-size: 16px;
-    text-transform: lowercase !important;
-    padding-top: 30px;
-    font-family: 'OswaldLight' !important;
-}
-
-input {
-    width: 100%;
-    height: 50px;
-    margin-top: 5px;
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding-left: 10px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    color: #fff;
-    border: 0px;
-}
-
-textarea {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 40px;
-    max-height: 250px;
+.rightWithLogo {
+    width: 300px;
     height: 100px;
-    margin-top: 5px;
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 0px;
-    padding-left: 10px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    color: #fff;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.sendButton {
-    width: 100%;
+.footerLogo {
     height: 50px;
-    border: 0;
-    background-color: #fff;
-    color: #000;
-    font-size: 22px;
-    border-radius: 3px;
-    margin-top: 30px;
+}
+
+.rights {
+    width: 100%;
+    font-size: 16px;
+    color: #666;
+    text-transform: lowercase !important;
+    font-family: 'OswaldLight' !important;
+    margin-top: 10px;
+    align-items: center;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;
+}
+
+.sendMessage {
+    font-size: 18px;
+    color: #444;
+    text-transform: lowercase !important;
+    font-family: 'OswaldLight' !important;
+    margin-top: 10px;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    margin-left: 5%;
 }
 
-.locationAPI {
-    width: 45%;
-    height: 500px;
-    position: relative;
-}
-
-.locationAPITitle {
-    color: #fff;
-    font-size: 22px;
-    letter-spacing: 2px;
-}
-
-.locationByText {
-    width: 100%;
+.linksForContactCCSE {
+    width: 300px;
     height: 50px;
-    margin-top: 30px;
+    margin-right: 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.locationIcon {
+.contactIconContainer {
     width: 50px;
-    height: 100%;
+    height: 50px;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.locationIcon>img {
-    width: 50px;
-}
-
-.locationPara {
-    font-size: 16px;
-    font-family: 'OswaldLight' !important;
-    text-transform: lowercase !important;
-    color: #fff;
-    height: 10px;
-    letter-spacing: 1px;
-}
-
-.locationByAPI {
-    width: 100%;
-    background-color: #fff;
-    border-radius: 5px;
-    opacity: 0.8;
-    margin-top: 30px;
-    flex-grow: 3;
-    height: 300px;
-    position: absolute;
-    bottom: 0;
-}
-
-.contactMethod {
-    margin-top: 40px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.contactMethodTitle {
-    color: #fff;
-    font-size: 22px;
-    letter-spacing: 2px;
-}
-
-.methods {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 100%;
-    flex-grow: 1;
-    align-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-.methodContainer {
-    width: auto;
-    height: 45px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
     cursor: pointer;
-    margin-left: 30px;
 }
 
-.methodContainer>img {
-    width: 40px;
+.contactIconContainer>img {
+    height: 35px;
 }
 
-.methodContainer>p {
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 1px;
-    font-family: 'OswaldLight' !important;
-    text-transform: lowercase !important;
-    padding-left: 10px;
-}
-
-@media (max-width:800px) {
-    .sendMessageForm {
-        width: 48%;
-        height: 400px;
+@media (max-width:700px) {
+    footer {
+        height: 200px;
+        flex-wrap: wrap;
         position: relative;
-    }
-    .label {
-        font-size: 14px;
-        padding-top: 20px;
-    }
-    input {
-        height: 40px;
-    }
-    textarea {
-        height: 60px;
-    }
-    .sendButton {
-        height: 40px;
-    }
-    .locationAPI {
-        width: 48%;
-        height: 400px;
-    }
-    .locationByText {
-        margin-top: 20px;
-    }
-    .locationIcon {
-        width: 50px;
-        height: 100%;
-    }
-    .locationIcon>img {
-        width: 50px;
-    }
-    .locationByAPI {
-        width: 100%;
-        height: 250px;
-    }
-    .methods {
         align-items: flex-start;
-        justify-content: flex-start;
     }
-    .methodContainer {
-        width: 50%;
-        margin-top: 20px;
-        margin-left: 0;
+    .rightWithLogo {
+        width: 80%;
+        height: 70px;
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .linksForContactCCSE {
+        width: 80%;
+        height: 50px;
+        margin-left: 10%;
+    }
+    .contactIconContainer>img {
+        height: 40px;
     }
 }
 
-@media (max-width:600px) {
-    .sendMessageForm {
-        width: 100%;
-        height: auto;
+@media (max-width:400px) {
+    .rightWithLogo {
+        width: 94%;
+        height: 70px;
+        margin-left: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    .label {
-        font-size: 14px;
-        padding-top: 20px;
+    .linksForContactCCSE {
+        width: 94%;
+        height: 50px;
+        margin-left: 3%;
     }
-    input {
+    .contactIconContainer>img {
         height: 40px;
-    }
-    textarea {
-        height: 60px;
-    }
-    .sendButton {
-        height: 40px;
-        position: static;
-    }
-    .locationAPITitle {
-        padding-top: 80px;
-    }
-    .locationAPI {
-        width: 100%;
-        height: auto;
-    }
-    .locationByText {
-        margin-top: 20px;
-    }
-    .locationIcon {
-        width: 50px;
-        height: 100%;
-    }
-    .locationIcon>img {
-        width: 50px;
-    }
-    .locationByAPI {
-        width: 100%;
-        height: 250px;
-        position: static;
-    }
-    .methods {
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-    .contactMethodTitle {
-        padding-top: 80px;
-    }
-    .methods {
-        margin-top: 10px;
-    }
-    .methodContainer {
-        width: 100%;
-        margin-top: 20px;
-        margin-left: 0;
     }
 }

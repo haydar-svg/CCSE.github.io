@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="./VIEWS/REFERENCES/refernces.css">
     <script src="./VIEWS/REFERENCES/refernces.js"></script>
     <link rel="stylesheet" href="./VIEWS/FOOTER/index.css">
+    <script src="./VIEWS/FOOTER/footer.js"></script>
+    <link rel="stylesheet" href="./VIEWS/FOOTER/sendMessage.css">
+    <link rel="stylesheet" href="./VIEWS/ACT/act.css">
+    <script src="./VIEWS/ACT/act.js"></script>
     <title>CCSE</title>
 </head>
 
@@ -347,78 +351,144 @@
         </div>
         <img src="./PUBLIC/IMAGES/chevron_right.svg" alt="chevron left" class="scrollToRight" onclick="scrollToRight()">
     </div>
-    <footer id="footer">
-        <div class="footerElementsContainer">
-            <div class="sendMessageForm">
-                <div class="formTitle">
-                    envoyer un message
-                </div>
-                <div class="label">
-                    le nom complet *
-                </div>
-                <input type="text">
-                <div class="label">
-                    email *
-                </div>
-                <input type="text">
-                <div class="label">
-                    le message *
-                </div>
-                <textarea></textarea>
-                <button class="sendButton">
-                    Envoyer 
-            </button>
-            </div>
-            <div class="locationAPI">
-                <div class="locationAPITitle">
-                    Localisation géographique
-                </div>
-                <div class="locationByText">
-                    <div class="locationIcon">
-                        <img src="./PUBLIC/IMAGES/footer/location.svg" alt="location icon">
+    <div class="actTitle">
+        Services
+    </div>
+    <div class="shapesContainer">
+        <img src="./PUBLIC/IMAGES/chevron_left.svg" alt="chevron left" class="scrollToLeftEvent" onclick="scrollToLeftEvent()">
+        <div class="scrollEvents" id="scrollEvents">
+            <div class="events">
+                <div class="oneShape">
+                    <div class="eventImgContainer">
+                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
                     </div>
-                    <div class="locationPara">
-                        BOULEVARD MOHAMMED DERFOUFI, IMMEUBLE HIMRI, 3ÈME ÉTAGE N°5, 60000 OUJDA-MAROC
+                    <div class="eventTitle">
+                        the first company at jerada
+                    </div>
+                    <div class="eventDescription">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
+                    <div class="readMoreAboutEvent">
+                        read more
                     </div>
                 </div>
-                <div class="locationByAPI">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.965179389678!2d-1.9177607148547438!3d34.68082828043965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7865bba6c03af9%3A0x55e3a56a49a1ba7!2sCabinet%20de%20consulting%20et%20services%20aux%20Entreprises%20CCSE!5e0!3m2!1sar!2sma!4v1679811574668!5m2!1sar!2sma"
-                        width="100%" height="100%" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="oneShape">
+                    <div class="eventImgContainer">
+                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                    </div>
+                    <div class="eventTitle">
+                        the first company at jerada
+                    </div>
+                    <div class="eventDescription">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
+                    <div class="readMoreAboutEvent">
+                        read more
+                    </div>
                 </div>
-            </div>
-            <div class="contactMethod">
-                <div class="contactMethodTitle">
-                    Contactez nous
+                <div class="oneShape">
+                    <div class="eventImgContainer">
+                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                    </div>
+                    <div class="eventTitle">
+                        the first company at jerada
+                    </div>
+                    <div class="eventDescription">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
+                    <div class="readMoreAboutEvent">
+                        read more
+                    </div>
                 </div>
-                <div class="methods">
-                    <div class="methodContainer">
-                        <img src="./PUBLIC/IMAGES/footer/email.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            CABINETCCSE@GMAIL.COM
-                        </p>
+                <div class="oneShape">
+                    <div class="eventImgContainer">
+                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
                     </div>
-                    <div class="methodContainer">
-                        <img src="./PUBLIC/IMAGES/footer/phone.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            0536681122 / 0661396051
-                        </p>
+                    <div class="eventTitle">
+                        the first company at jerada
                     </div>
-                    <div class="methodContainer">
-                        <img src="./PUBLIC/IMAGES/footer/facebook.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            CCSE CONSULTING
-                        </p>
+                    <div class="eventDescription">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
+                    <div class="readMoreAboutEvent">
+                        read more
                     </div>
-                    <div class="methodContainer">
-                        <img src="./PUBLIC/IMAGES/footer/instagram.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            CCSE.CONSULTING
-                        </p>
+                </div>
+                <div class="oneShape">
+                    <div class="eventImgContainer">
+                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                    </div>
+                    <div class="eventTitle">
+                        the first company at jerada
+                    </div>
+                    <div class="eventDescription">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
+                    <div class="readMoreAboutEvent">
+                        read more
                     </div>
                 </div>
             </div>
         </div>
+        <img src="./PUBLIC/IMAGES/chevron_right.svg" alt="chevron left" class="scrollToRightEvent" onclick="scrollToRightEvent()">
+    </div>
+    <div class="sendMessageWindowParrent" id="sendMessageWindowParrent">
+        <div class="windowForScrollingInphone">
+            <div class="sendMessageWindow">
+                <div class="closeMessageWindow" onclick="closeMessageWindow()">
+                    <img src="./PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
+                </div>
+                <div class="sendMessageTitle">
+                    Sélectionnez les jours
+                </div>
+                <div class="inputSendMessage">
+                    <div>
+                        <img src="./PUBLIC/IMAGES/footer/persone.svg" alt="input icon">
+                    </div>
+                    <input type="text" id="fullNameForUser" placeholder="full name">
+                </div>
+                <div class="inputSendMessage">
+                    <div>
+                        <img src="./PUBLIC/IMAGES/footer/phone.svg" alt="input icon">
+                    </div>
+                    <input type="text" id="fullNameForUser" placeholder="phone number">
+                </div>
+                <label for="message" class="textareaLabel">
+                    write your message here
+                </label>
+                <textarea name="message" id="message" class="message"></textarea>
+                <button class="sendMessageButton">
+                    send message
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="rightWithLogo">
+            <img src="./PUBLIC/IMAGES/landingPage/ccseLogo.png" alt="ccse logo" class="footerLogo">
+            <div class="sendMessage" onclick="openMessageWindow()">
+                send message
+            </div>
+        </div>
+
+        <div class="linksForContactCCSE">
+            <div class="contactIconContainer">
+                <img src="./PUBLIC/IMAGES/footer/email.svg" alt="email icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="./PUBLIC/IMAGES/footer/phone.svg" alt="phone icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="./PUBLIC/IMAGES/footer/facebook.svg" alt="facebook icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="./PUBLIC/IMAGES/footer/instagram.svg" alt="instagram icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="./PUBLIC/IMAGES/footer/location.svg" alt="location icon">
+            </div>
+        </div>
+        <p class="rights">
+            all reight reserved
+        </p>
     </footer>
 </body>
+
+</html>
 
 </html>

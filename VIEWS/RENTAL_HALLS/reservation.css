@@ -84,6 +84,7 @@
     border-radius: 5px;
     background-color: #edeff2;
     overflow: hidden;
+    border: 0;
 }
 
 .clientPhoneNumber>img {
@@ -247,12 +248,12 @@
 
 .divForSpaceAV {
     width: 100%;
-    height: 20px;
+    height: 60px;
 }
 
 .dateAvailable {
     width: 90%;
-    height: 40px;
+    height: auto;
     background-color: rgba(116, 255, 116, 0.164);
     border-radius: 5px;
     margin-left: 5%;

@@ -8,84 +8,73 @@
     <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
     <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
     <link rel="stylesheet" href="./index.css">
+    <script src="../../PUBLIC/JS/global.js"></script>
     <title>Document</title>
 </head>
 
+
 <body>
-    <footer>
-        <div class="footerElementsContainer">
-            <div class="sendMessageForm">
-                <div class="formTitle">
-                    envoyer un message
-                </div>
-                <div class="label">
-                    le nom complet *
-                </div>
-                <input type="text">
-                <div class="label">
-                    email *
-                </div>
-                <input type="text">
-                <div class="label">
-                    le message *
-                </div>
-                <textarea></textarea>
-                <button class="sendButton">
-                    Envoyer 
-            </button>
-            </div>
-            <div class="locationAPI">
-                <div class="locationAPITitle">
-                    Localisation géographique
-                </div>
-                <div class="locationByText">
-                    <div class="locationIcon">
-                        <img src="../../PUBLIC/IMAGES/footer/location.svg" alt="location icon">
+    <footer id="footer">
+        <div class="sendMessageWindowParrent" id="sendMessageWindowParrent">
+            <div class="windowForScrollingInphone">
+                <div class="sendMessageWindow">
+                    <div class="closeMessageWindow" onclick="closeMessageWindow()">
+                        <img src="../../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
                     </div>
-                    <div class="locationPara">
-                        BOULEVARD MOHAMMED DERFOUFI, IMMEUBLE HIMRI, 3ÈME ÉTAGE N°5, 60000 OUJDA-MAROC
+                    <div class="sendMessageTitle">
+                        Sélectionnez les jours
                     </div>
-                </div>
-                <div class="locationByAPI">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.965179389678!2d-1.9177607148547438!3d34.68082828043965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7865bba6c03af9%3A0x55e3a56a49a1ba7!2sCabinet%20de%20consulting%20et%20services%20aux%20Entreprises%20CCSE!5e0!3m2!1sar!2sma!4v1679811574668!5m2!1sar!2sma"
-                        width="100%" height="100%" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            <div class="contactMethod">
-                <div class="contactMethodTitle">
-                    Contactez nous
-                </div>
-                <div class="methods">
-                    <div class="methodContainer">
-                        <img src="../../PUBLIC/IMAGES/footer/email.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            CABINETCCSE@GMAIL.COM
-                        </p>
+                    <div class="inputSendMessage">
+                        <div>
+                            <img src="../../PUBLIC/IMAGES/footer/persone.svg" alt="input icon">
+                        </div>
+                        <input type="text" id="fullNameForUser" placeholder="full name">
                     </div>
-                    <div class="methodContainer">
-                        <img src="../../PUBLIC/IMAGES/footer/phone.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            0536681122 / 0661396051
-                        </p>
+                    <div class="inputSendMessage">
+                        <div>
+                            <img src="../../PUBLIC/IMAGES/footer/phone.svg" alt="input icon">
+                        </div>
+                        <input type="text" id="fullNameForUser" placeholder="phone number">
                     </div>
-                    <div class="methodContainer">
-                        <img src="../../PUBLIC/IMAGES/footer/facebook.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            CCSE CONSULTING
-                        </p>
-                    </div>
-                    <div class="methodContainer">
-                        <img src="../../PUBLIC/IMAGES/footer/instagram.svg" alt="" class="methodIcon">
-                        <p class="methodText">
-                            CCSE.CONSULTING
-                        </p>
-                    </div>
+                    <label for="message" class="textareaLabel">
+                        write your message here
+                    </label>
+                    <textarea name="message" id="message" class="message"></textarea>
+                    <button class="sendMessageButton">
+                        send message
+                    </button>
                 </div>
             </div>
         </div>
+        <div class="rightWithLogo">
+            <img src="../../PUBLIC/IMAGES/landingPage/ccseLogo.png" alt="ccse logo" class="footerLogo">
+            <div class="sendMessage" onclick="openMessageWindow()">
+                send message
+            </div>
+        </div>
 
-
+        <div class="linksForContactCCSE">
+            <div class="contactIconContainer">
+                <img src="../../PUBLIC/IMAGES/footer/email.svg" alt="email icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="../../PUBLIC/IMAGES/footer/phone.svg" alt="phone icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="../../PUBLIC/IMAGES/footer/facebook.svg" alt="facebook icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="../../PUBLIC/IMAGES/footer/instagram.svg" alt="instagram icon">
+            </div>
+            <div class="contactIconContainer">
+                <img src="../../PUBLIC/IMAGES/footer/location.svg" alt="location icon">
+            </div>
+        </div>
+        <p class="rights">
+            all reight reserved
+        </p>
     </footer>
+
 </body>
 
 </html>
