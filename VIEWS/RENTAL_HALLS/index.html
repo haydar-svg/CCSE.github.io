@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .rentalHalls {
+            width: 100%;
+            height: 700px;
+            background-image: linear-gradient(#00000088, #00000081), url(../../PUBLIC/IMAGES/84a206.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .descriptionText {
+            font-size: 40px;
+            color: #fff;
+            padding-top: 40px;
+            padding-bottom: 10px;
+            letter-spacing: 2px;
+            margin-left: 5%;
+            padding-left: 5px;
+        }
+        
+        .details {
+            width: 90%;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 5%;
+            flex-wrap: wrap;
+        }
+        
+        .priceDetail,
+        .equipementDetails,
+        .featuesDetails {
+            width: 330px;
+            height: auto;
+            min-height: 450px;
+            border-radius: 5px;
+            margin-top: 40px;
+            position: relative;
+            background: linear-gradient(135deg, rgb(218, 233, 255) 30%, rgba(179, 208, 253, 0.219));
+            flex-grow: 1;
+            margin: 5px;
+            min-width: 300px;
+        }
+        
+        .dtailIcon {
+            width: 40px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        
+        .detailTitle {
+            font-size: 25px;
+            color: #333;
+            padding-top: 0px;
+            padding-left: 15px;
+        }
+        
+        .detailElement {
+            font-size: 18px;
+            color: #333;
+            padding-top: 10px;
+            padding-left: 15px;
+            text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        
+        .detailElement>img {
+            width: 35px;
+            padding-right: 4px;
+        }
+        
+        @media (max-width:1130px) {
+            .rentalHalls {
+                height: 840px;
+            }
+            .priceDetail {
+                background: linear-gradient(135deg, rgba(179, 209, 253, 0.685), rgb(218, 233, 255));
+            }
+            .priceDetail,
+            .equipementDetails,
+            .featuesDetails {
+                min-height: 380px;
+            }
+            .featuesDetails {
+                height: auto;
+                min-height: auto;
+            }
+            .featuesDetails>p:last-of-type {
+                padding-bottom: 30px;
+            }
+        }
+        
+        @media (max-width:770px) {
+            .rentalHalls {
+                height: 1200px;
+                background-position: center !important;
+            }
+            .priceDetail {
+                background: linear-gradient(135deg, rgb(218, 233, 255) 30%, rgba(179, 208, 253, 0.219));
+            }
+            .priceDetail,
+            .equipementDetails,
+            .featuesDetails {
+                height: auto;
+                min-height: auto;
+            }
+            .priceDetail>p:last-of-type {
+                padding-bottom: 30px;
+            }
+            .equipementDetails>p:last-of-type {
+                padding-bottom: 30px;
+            }
+        }
+    </style>
+    <div class="rentalHalls">
+        <p class="descriptionText">
+            Nous mettons nos salles à votre disposition
+        </p>
+        <div class="details">
+            <div class="priceDetail">
+                <img src="../../PUBLIC/IMAGES/COACHING.svg" alt="Desc icon" class="dtailIcon">
+                <p class="detailTitle">
+                    DES TARIFS TRÈS ATTRACTIFS
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+            </div>
+            <div class="equipementDetails">
+                <img src="../../PUBLIC/IMAGES/COACHING.svg" alt="Desc icon" class="dtailIcon">
+                <p class="detailTitle">
+                    DES ÉQUIPEMENTS VARIÉS
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+            </div>
+            <div class="featuesDetails">
+                <img src="../../PUBLIC/IMAGES/COACHING.svg" alt="Desc icon" class="dtailIcon">
+                <p class="detailTitle">
+                    DES SERVICES SUR MESURE
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+                <p class="detailElement">
+                    <img src="../../PUBLIC/IMAGES/check.svg" alt="check icon"> Devis Instantane Sur Simple Appel
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
