@@ -2,20 +2,15 @@ function $(id) {
     return document.getElementById(id);
 }
 
-function seePictures(element) {
-    element.style.animationName = 'showPictures';
-    $('cameraIcon').setAttribute('src', './PUBLIC/IMAGES/rentalHalls/close.svg')
-    element.setAttribute('onclick', 'hidePictures(this)')
-    $('pictureContainer').classList.add('closeDesign');
-    $('pictureContainer').firstElementChild.innerHTML = '';
+function seePictures() {
+    $('seePictureWindow').style.display = "block";
+    $('body').style.overflowY = "hidden";
+
 }
 
-function hidePictures(element) {
-    element.style.animationName = '';
-    $('cameraIcon').setAttribute('src', './PUBLIC/IMAGES/rentalHalls/camera.svg')
-    element.setAttribute('onclick', 'seePictures(this)')
-    $('pictureContainer').classList.remove('closeDesign');
-    $('pictureContainer').firstElementChild.innerHTML = 'see pictures';
+function hiddePictures() {
+    $('seePictureWindow').style.display = "none";
+    $('body').style.overflowY = "scroll";
 }
 
 function openTimeWindow(event) {
@@ -26,8 +21,12 @@ function openTimeWindow(event) {
     $('servicesTitle').style.filter = "blur(2px)";
     $('services').style.filter = "blur(2px)";
     $('rentalHalls').style.filter = "blur(2px)";
+    $('events').style.filter = "blur(2px)";
+    $('referencesTitle').style.filter = "blur(2px)";
+    $('eventsTitle').style.filter = "blur(2px)";
     $('references').style.filter = "blur(2px)";
     $('footer').style.filter = "blur(2px)";
+    $('body').style.overflowY = "hidden";
 }
 
 function closeTimeWindow(event) {
@@ -37,9 +36,13 @@ function closeTimeWindow(event) {
     $('servicesTitle').style.filter = "blur(0px)";
     $('services').style.filter = "blur(0px)";
     $('rentalHalls').style.filter = "blur(0px)";
+    $('events').style.filter = "blur(0px)";
+    $('referencesTitle').style.filter = "blur(0px)";
+    $('eventsTitle').style.filter = "blur(0px)";
     $('references').style.filter = "blur(0px)";
     $('footer').style.filter = "blur(0px)";
     $('nav').removeAttribute('style');
+    $('body').style.overflowY = "scroll";
 }
 
 function openReservationProcess(event) {
@@ -56,8 +59,13 @@ function closeReservationProcess(event) {
     $('services').style.filter = "blur(0px)";
     $('rentalHalls').style.filter = "blur(0px)";
     $('references').style.filter = "blur(0px)";
+    $('referencesTitle').style.filter = "blur(0px)";
+    $('eventsTitle').style.filter = "blur(0px)";
+    $('events').style.filter = "blur(0px)";
     $('footer').style.filter = "blur(0px)";
     $('nav').removeAttribute('style');
+    $('body').style.overflowY = "scroll";
+
 }
 
 function setDateStart(event) {
@@ -74,15 +82,12 @@ function equipementDetail() {
 <div class="blockTitle">
     Location de salles
 </div>
-<div class="seePictures" onclick="seePictures(this)">
+<div class="seePictures" onclick="seePictures()">
     <div class="pictureContainer" id="pictureContainer">
         <span>
             voir les images
         </span>
         <img src="./PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
-    </div>
-    <div class="salePhoto">
-        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
     </div>
 </div>
 <div class="elementContainer">
@@ -91,7 +96,7 @@ function equipementDetail() {
         <p>
             Nous disposons de salles équipées et adaptées pour répondre à vos besoins, que vous soyez une entreprise, une association ou un particulier </p>
         <button class="takeDate" onclick="openTimeWindow(event)">
-            reserve
+            réservation
         </button>
     </div>
     <div class="equipementDetails">
@@ -134,15 +139,12 @@ function breakDetail() {
     <div class="blockTitle">
         Location de salles
     </div>
-    <div class="seePictures" onclick="seePictures(this)">
+    <div class="seePictures" onclick="seePictures()">
         <div class="pictureContainer" id="pictureContainer">
             <span>
                 voir les images
             </span>
             <img src="./PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
-        </div>
-        <div class="salePhoto">
-            <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
         </div>
     </div>
     <div class="elementContainer">
@@ -156,7 +158,7 @@ function breakDetail() {
                 besoins en matière de nourriture et de boissons    
             </p>
             <button class="takeDate" onclick="openTimeWindow(event)">
-                reserve
+                réservation
             </button>
         </div>
         <div class="equipementDetails">
@@ -206,15 +208,12 @@ function priceDetail() {
 <div class="blockTitle">
     Location de salles
 </div>
-<div class="seePictures" onclick="seePictures(this)">
+<div class="seePictures" onclick="seePictures()">
     <div class="pictureContainer" id="pictureContainer">
         <span>
             voir les images
         </span>
         <img src="./PUBLIC/IMAGES/rentalHalls/camera.svg" alt="picture" id="cameraIcon">
-    </div>
-    <div class="salePhoto">
-        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="sale photo">
     </div>
 </div>
 <div class="elementContainer">
@@ -225,7 +224,7 @@ function priceDetail() {
             formule en fonction de vos besoins et de votre budget.
         </p>
         <button class="takeDate" onclick="openTimeWindow(event)">
-            reserve
+            réservation
         </button>
     </div>
     <div class="equipementDetails">

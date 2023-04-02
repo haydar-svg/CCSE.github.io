@@ -1,6 +1,6 @@
 .serviceDropDownListNavBar {
     margin-top: 22px;
-    margin-left: 250px;
+    margin-left: 200px;
     position: absolute;
     overflow: hidden;
     height: 50px;
@@ -20,7 +20,7 @@
 }
 
 .serviceDropDownTitle>p {
-    font-size: 20px;
+    font-size: 18px;
     color: #444;
     text-transform: lowercase !important;
     font-family: 'OswaldLight' !important;
@@ -60,7 +60,7 @@
 }
 
 .oneServiceContainer {
-    font-size: 20px;
+    font-size: 18px;
     color: #23364d;
     background-color: #fff;
     width: 100%;
@@ -120,8 +120,8 @@
     align-items: center;
     justify-content: center;
     margin-top: 22px;
-    margin-left: 240px;
-    font-size: 20px;
+    margin-left: 180px;
+    font-size: 18px;
     color: #444;
     text-transform: lowercase !important;
     font-family: 'OswaldLight' !important;
@@ -145,7 +145,7 @@
     text-transform: lowercase !important;
     font-family: 'OswaldLight' !important;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 18px;
     z-index: 99;
     position: relative;
 }
@@ -199,7 +199,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         height: 40px;
-        font-size: 20px;
+        font-size: 18px;
         color: #444;
         text-transform: lowercase !important;
         font-family: 'OswaldLight' !important;

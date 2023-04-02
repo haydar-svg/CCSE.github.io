@@ -18,11 +18,6 @@
     left: 5%;
 }
 
-.salePhoto {
-    width: 100%;
-    height: 100%;
-}
-
 .seePictures {
     width: 250px;
     height: 50px;
@@ -72,20 +67,57 @@
     justify-content: center;
 }
 
-@keyframes showPictures {
-    from {
-        width: 250px;
-        height: 50px;
-        top: 40px;
-        right: 5%;
-    }
-    to {
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        right: 0%;
-        border-radius: 0;
-    }
+.seePictureWindow {
+    width: 100%;
+    height: 100%;
+    background-color: #0000004d;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+
+.closeIconForPicturesWindow {
+    width: 100%;
+    height: 40px;
+    direction: rtl;
+}
+
+.closeIconForPicturesWindow>img {
+    padding: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ffffff4d;
+}
+
+.sallePicturesContainer {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.oneImageContainer {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 0px;
+    padding: 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+.oneImageContainer>img {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 10px;
 }
 
 .elementContainer {

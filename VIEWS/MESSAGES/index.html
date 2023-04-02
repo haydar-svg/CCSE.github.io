@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <script src="../../PUBLIC/JS/global.js"></script>
+    <title>Document</title>
+    <style>
+        .messagesContainer {
+            width: 80%;
+            height: auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .title {
+            font-size: 30px;
+            padding-top: 40px;
+            color: #23364d;
+            text-transform: lowercase !important;
+        }
+        
+        .messageContianer {
+            width: 100%;
+            height: auto;
+            margin-top: 60px;
+            position: relative;
+        }
+        
+        .userInfo {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .userPersonnalInfo {
+            width: auto;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+        
+        .userPicture {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .userPicture>img {
+            width: 80px;
+            opacity: 0.5;
+        }
+        
+        .userNameAndPhone {
+            width: auto;
+            height: 40px;
+            display: flex;
+            align-content: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        .userNameAndPhone>p:nth-of-type(1) {
+            width: 100%;
+            padding-left: 10px;
+            color: #23364dcb;
+            font-size: 16px;
+        }
+        
+        .timeOfsend {
+            width: auto;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 5px;
+            color: #23364d;
+            font-size: 14px;
+        }
+        
+        .messageText {
+            width: 100%;
+            height: auto;
+            border-radius: 0px 10px 10px 10px;
+            background-color: #edeff2;
+            margin-top: 10px;
+            padding: 20px;
+            color: #23364d;
+            font-size: 18px;
+            font-family: 'OswaldLight' !important;
+            text-transform: lowercase !important;
+        }
+        
+        .deleteMessageButton {
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0px;
+            background-color: #fce8e8;
+            margin-top: 10px;
+            color: red;
+            cursor: pointer;
+            padding-right: 4px;
+        }
+        
+        footer {
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 80px;
+        }
+        
+        @media (max-width:600px) {
+            .messagesContainer {
+                width: 90%;
+            }
+            .userNameAndPhone>p:nth-of-type(1) {
+                font-size: 14px;
+            }
+            .deleteMessageButton {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="messagesContainer">
+        <p class="title">
+            messages
+        </p>
+        <div class="messageContianer">
+            <div class="userInfo">
+                <div class="userPersonnalInfo">
+                    <div class="userPicture">
+                        <img src="../../PUBLIC/IMAGES/person-circle.svg" alt="user picture">
+                    </div>
+                    <div class="userNameAndPhone">
+                        <p>
+                            mostafa haydar/ 0623480943
+                        </p>
+                    </div>
+                </div>
+                <div class="timeOfsend">
+                    05-04-2002 12:33
+                </div>
+            </div>
+            <div class="messageText">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quasi nam voluptatum magnam necessitatibus nihil quo ad, quam quod ea quos ex dolores adipisci libero deleniti temporibus expedita labore fuga.
+            </div>
+            <div class="deleteMessageButton">
+                supprimer
+                <img src="../../PUBLIC/IMAGES/delete.svg" alt="delete icon">
+            </div>
+        </div>
+    </div>
+    <footer>Tous les droits sont réservés</footer>
+</body>
+
+</html>
+
+</html>
