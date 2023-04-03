@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 .cart-indicateur{
     width: 220px;
@@ -20,15 +20,27 @@
     margin: 10px;
 }
 .cart-indicateur img{
-    width: 40px;
+    width: 50px;
     height: auto;
+    margin-bottom: 10px;
 }
 .chiffres .num{
-    font-size: 70px;
-    font-weight: 300;
+    font-size: 40px;
     color: #222;
 }
 .category {
-    font-size: 25px;
-    word-break: break-all;
+    font-size: 20px;
+}
+@media screen and (max-width:470px) {
+    .cart-indicateur{
+        margin: 80px;
+    }
+    .indicateur-container{
+        height: auto;
+    }
+}
+@media screen and (max-width:300px) {
+    .category{
+        font-size: 13px;
+    }
 }
