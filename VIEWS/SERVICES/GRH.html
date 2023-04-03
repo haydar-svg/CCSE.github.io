@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="./serviceDescription.css">
+    <script src="../../PUBLIC/JS/global.js"></script>
+</head>
+<style>
+    .descriptionTitleAndPictures {
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/services/grh.jpg);
+    background-position: center 0 20px;
+    position: relative;
+}
+</style>
+<body>
+    <div class="descriptionContainer">
+        <div class="descriptionTitleAndPictures">
+            <div class="backToServicePage">
+                <a href="../../index.html">
+                    <img src="../../PUBLIC/IMAGES/services/back.svg" alt="back link">
+                </a>
+            </div>
+            <div class="serviceInfoText">
+                <div class="serviceTitle">
+                    Gestion de Ressources Humaines
+                </div>
+                <div class="serviceDetail">
+                    Optimisez la gestion de vos ressources humaines et améliorez la performance de votre entreprise avec notre service de conseil en GRH</div>
+            </div>
+        </div>
+        <div class="descriptionParagraphes">
+            <img src="" class="designIcon" id="sectionBackgroundDesign" alt="design">
+            <div class="switchInfo">
+                <div class="circel circel1" onclick="vision(this)" id="vision">
+                    <img src="../../PUBLIC/IMAGES/services/telescope-observation-svgrepo-com.svg" alt="telescope">
+                </div>
+                <div class="circel circel2" onclick="mission(this)" id="mission">
+                    <img src="../../PUBLIC/IMAGES/services/assignment_turned_in_FILL0_wght400_GRAD0_opsz48.svg" alt="assignment">
+                </div>
+                <div class="circel circel3" onclick="objectif(this)" id="objectif">
+                    <img src="../../PUBLIC/IMAGES/services/flag_FILL0_wght400_GRAD0_opsz48.svg" alt="flag">
+                </div>
+            </div>
+            <div class="infoAboutServiceTitle" id="sectionTitle">
+            </div>
+            <div class="infoAboutService" id="sectionPara">
+            </div>
+        </div>
+    </div>
+    <script>
+        function vision(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'vision'
+            $('sectionPara').innerHTML = `  Notre service de ressources humaines est conçu pour aider les entreprises à recruter, à former et à
+gérer leur personnel de manière efficace.</br>
+Nous comprenons que les ressources humaines sont la clé de la réussite de toute entreprise, c'est
+pourquoi nous offrons une gamme complète de services pour vous aider à gérer votre personnel de
+manière optimale.
+            `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/telescopeDesign.svg');
+            $('mission').style.opacity = '0.6';
+            $('mission').style.width = '60px';
+            $('mission').style.height = '60px';
+            $('objectif').style.opacity = '0.6';
+            $('objectif').style.width = '60px';
+            $('objectif').style.height = '60px';
+        }
+        vision($('vision'))
+
+        function mission(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'Mission'
+            $('sectionPara').innerHTML = ` Que vous cherchiez à recruter de nouveaux employés, à former votre personnel existant ou à
+améliorer la gestion de la performance, notre service de ressources humaines est là pour vous
+aider.</br>
+Nous offrons une gamme de services, y compris le recrutement, la formation, la gestion de la
+performance, la rémunération et les avantages sociaux, pour répondre à tous vos besoins en
+matière de ressources humaines.
+            `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/assignmentDesign.svg');
+            $('vision').style.opacity = '0.6';
+            $('vision').style.width = '60px';
+            $('vision').style.height = '60px';
+            $('objectif').style.opacity = '0.6';
+            $('objectif').style.width = '60px';
+            $('objectif').style.height = '60px';
+        }
+
+        function objectif(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'Objectif'
+            $('sectionPara').innerHTML = ` En choisissant notre service de ressources humaines, vous bénéficiez d'un
+accompagnement personnalisé tout au long du processus.</br>
+Nous travaillons en étroite collaboration avec vous pour comprendre vos objectifs,
+identifier les opportunités de croissance et proposer des solutions pratiques et durables
+pour vous aider à atteindre vos objectifs en matière de gestion des ressources humaines.
+            `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/flagDesign.svg');
+            $('vision').style.opacity = '0.6';
+            $('vision').style.width = '60px';
+            $('vision').style.height = '60px';
+            $('mission').style.opacity = '0.6';
+            $('mission').style.width = '60px';
+            $('mission').style.height = '60px';
+        }
+    </script>
+</body>
+
+</html>

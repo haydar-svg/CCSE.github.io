@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="./serviceDescription.css">
+    <script src="../../PUBLIC/JS/global.js"></script>
+</head>
+<style>
+    .descriptionTitleAndPictures {
+    width: 50%;
+    height: 100vh;
+    background-image: linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/services/juridique.jpg);
+    background-position:center;
+    position: relative;
+}
+</style>
+<body>
+    <div class="descriptionContainer">
+        <div class="descriptionTitleAndPictures">
+            <div class="backToServicePage">
+                <a href="../../index.html">
+                    <img src="../../PUBLIC/IMAGES/services/back.svg" alt="back link">
+                </a>
+            </div>
+            <div class="serviceInfoText">
+                <div class="serviceTitle">
+                    JURIDIQUE
+                </div>
+                <div class="serviceDetail">
+                    Optez pour un accompagnement de qualité pour votre développement et la gestion de vos formalités juridiques.
+                    </br> Faites confiance à l 'expertise reconnue de nos avocats pour garantir la sécurité de vos stratégies et de vos obligations.</div>
+            </div>
+        </div>
+        <div class="descriptionParagraphes">
+            <img src="" class="designIcon" id="sectionBackgroundDesign" alt="design">
+            <div class="switchInfo">
+                <div class="circel circel1" onclick="vision(this)" id="vision">
+                    <img src="../../PUBLIC/IMAGES/services/telescope-observation-svgrepo-com.svg" alt="telescope">
+                </div>
+                <div class="circel circel2" onclick="mission(this)" id="mission">
+                    <img src="../../PUBLIC/IMAGES/services/assignment_turned_in_FILL0_wght400_GRAD0_opsz48.svg" alt="assignment">
+                </div>
+                <div class="circel circel3" onclick="objectif(this)" id="objectif">
+                    <img src="../../PUBLIC/IMAGES/services/flag_FILL0_wght400_GRAD0_opsz48.svg" alt="flag">
+                </div>
+            </div>
+            <div class="infoAboutServiceTitle" id="sectionTitle">
+            </div>
+            <div class="infoAboutService" id="sectionPara">
+            </div>
+        </div>
+    </div>
+    <script>
+        function vision(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'vision'
+            $('sectionPara').innerHTML = `  Nous comprenons que la sécurité juridique est essentielle pour la réussite de votre entreprise, c'est
+pourquoi nous travaillons en étroite collaboration avec nos clients pour les aider à comprendre les
+implications juridiques de leurs décisions commerciales.</br>
+Nos avocats sont des experts dans leur domaine et ont une vaste expérience dans la gestion des
+questions juridiques complexes.
+            `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/telescopeDesign.svg');
+            $('mission').style.opacity = '0.6';
+            $('mission').style.width = '60px';
+            $('mission').style.height = '60px';
+            $('objectif').style.opacity = '0.6';
+            $('objectif').style.width = '60px';
+            $('objectif').style.height = '60px';
+        }
+        vision($('vision'))
+
+        function mission(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'Mission'
+            $('sectionPara').innerHTML = `  Que vous cherchiez à développer votre entreprise ou à gérer des questions juridiques complexes,
+notre service d'accompagnement est là pour vous aider.</br>
+Nous offrons une gamme de services, y compris l'aide à la création d'entreprise, la rédaction de
+contrats, la négociation de transactions et la résolution de litiges. `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/assignmentDesign.svg');
+            $(
+                'vision').style.opacity = '0.6';
+            $('vision').style.width = '60px';
+            $('vision').style.height = '60px';
+            $('objectif').style.opacity = '0.6';
+            $('objectif').style.width = '60px';
+            $('objectif').style.height = '60px';
+        }
+
+        function objectif(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'Objectif'
+            $('sectionPara').innerHTML = ` En choisissant notre service d'accompagnement, vous pouvez être sûr de bénéficier d'un
+accompagnement de qualité tout au long du processus.</br>
+Nos avocats travailleront en étroite collaboration avec vous pour comprendre vos besoins
+spécifiques et proposer des solutions pratiques et adaptées à vos besoins. `;
+            $(
+                'sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/flagDesign.svg');
+            $('vision').style.opacity = '0.6';
+            $('vision').style.width = '60px';
+            $('vision').style.height = '60px';
+            $('mission').style.opacity = '0.6';
+            $('mission').style.width = '60px';
+            $('mission').style.height = '60px';
+        }
+    </script>
+</body>
+
+</html>

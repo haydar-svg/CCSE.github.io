@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="./serviceDescription.css">
+    <script src="../../PUBLIC/JS/global.js"></script>
+</head>
+<style>
+    .descriptionTitleAndPictures {
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/services/ingénieurie.jpg);
+    background-position: center;
+    position: relative;
+}
+</style>
+<body>
+    <div class="descriptionContainer">
+        <div class="descriptionTitleAndPictures">
+            <div class="backToServicePage">
+                <a href="../../index.html">
+                    <img src="../../PUBLIC/IMAGES/services/back.svg" alt="back link">
+                </a>
+            </div>
+            <div class="serviceInfoText">
+                <div class="serviceTitle">
+                    INGÉNIERIE DE FORMATION
+                </div>
+                <div class="serviceDetail">
+                    Concevez des programmes de formation efficaces et sur mesure avec notre service d'ingénierie de formation</div>
+            </div>
+        </div>
+        <div class="descriptionParagraphes">
+            <img src="" class="designIcon" id="sectionBackgroundDesign" alt="design">
+            <div class="switchInfo">
+                <div class="circel circel1" onclick="vision(this)" id="vision">
+                    <img src="../../PUBLIC/IMAGES/services/telescope-observation-svgrepo-com.svg" alt="telescope">
+                </div>
+                <div class="circel circel2" onclick="mission(this)" id="mission">
+                    <img src="../../PUBLIC/IMAGES/services/assignment_turned_in_FILL0_wght400_GRAD0_opsz48.svg" alt="assignment">
+                </div>
+                <div class="circel circel3" onclick="objectif(this)" id="objectif">
+                    <img src="../../PUBLIC/IMAGES/services/flag_FILL0_wght400_GRAD0_opsz48.svg" alt="flag">
+                </div>
+            </div>
+            <div class="infoAboutServiceTitle" id="sectionTitle">
+            </div>
+            <div class="infoAboutService" id="sectionPara">
+            </div>
+        </div>
+    </div>
+    <script>
+        function vision(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'vision'
+            $('sectionPara').innerHTML = ` Notre service d'ingénierie de formation est conçu pour aider les entreprises et les organisations à
+concevoir et à mettre en œuvre des programmes de formation personnalisés et efficaces pour leurs
+employés.</br>
+Nous fournissons une gamme complète de services d'ingénierie de formation, notamment l'analyse des
+besoins de formation, la conception de programmes de formation, la mise en œuvre, l'évaluation et
+l'optimisation continue.
+            `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/telescopeDesign.svg');
+            $('mission').style.opacity = '0.6';
+            $('mission').style.width = '60px';
+            $('mission').style.height = '60px';
+            $('objectif').style.opacity = '0.6';
+            $('objectif').style.width = '60px';
+            $('objectif').style.height = '60px';
+        }
+        vision($('vision'))
+
+        function mission(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'Mission'
+            $('sectionPara').innerHTML = ` Nous fournissons une assistance personnalisée à chaque étape du processus d'ingénierie de
+formation, depuis l'analyse des besoins de formation jusqu'à l'évaluation des résultats et
+l'optimisation continue.</br>
+Nous travaillons avec les normes et les réglementations les plus récentes et les plus respectées
+pour garantir que nos programmes de formation sont de qualité et conformes aux exigences
+réglementaires.
+            `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/assignmentDesign.svg');
+            $('vision').style.opacity = '0.6';
+            $('vision').style.width = '60px';
+            $('vision').style.height = '60px';
+            $('objectif').style.opacity = '0.6';
+            $('objectif').style.width = '60px';
+            $('objectif').style.height = '60px';
+        }
+
+        function objectif(element) {
+            element.style.opacity = '1';
+            element.style.width = '80px';
+            element.style.height = '80px';
+            $('sectionTitle').innerHTML = 'Objectif'
+            $('sectionPara').innerHTML = ` Notre service d'ingénierie de formation offre une assistance personnalisée, des
+programmes de formation de qualité et une expertise de pointe pour aider nos
+clients à concevoir et à mettre en œuvre des programmes de formation efficaces et
+adaptés à leurs besoins.
+            `;
+            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/flagDesign.svg');
+            $('vision').style.opacity = '0.6';
+            $('vision').style.width = '60px';
+            $('vision').style.height = '60px';
+            $('mission').style.opacity = '0.6';
+            $('mission').style.width = '60px';
+            $('mission').style.height = '60px';
+        }
+    </script>
+</body>
+
+</html>

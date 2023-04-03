@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
     <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
     <link rel="stylesheet" href="./index.css">
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="../SERVICES/index.css">
+    <link rel="stylesheet" href="./reservation.css">
+    <script src="./index.js"></script>
+>>>>>>> mostafaBranch
     <title>Document</title>
 </head>
 
 <body>
+<<<<<<< HEAD
     <style>
         .rentalHalls {
             width: 100%;
@@ -195,4 +202,117 @@
     </div>
 </body>
 
+=======
+    <div class="completeReservationProcess" id="completeReservationProcess">
+        <div class="closeCompleteReservationProcess" onclick="closeReservationProcess()">
+            <img src="../../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
+        </div>
+        <div class="completeReservationTitle">
+            Sélectionnez les jours
+        </div>
+        <label for="numberOfPeople" class="completeProcessLabel">
+            nomber de personnes
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/groups_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+            </div>
+            <input type="text" id="numberOfPeople" class="completeProcessInput">
+        </div>
+        <label for="breakCoffee" class="completeProcessLabel">
+            pouses  inclus ou non
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/coffee.svg" alt="input icon">
+            </div>
+            <select name="breakCoffee" id="breakCoffee" class="completeProcessInput">
+                <option value="yes"> yes </option>
+                <option value="no"> no </option>
+            </select>
+        </div>
+
+        <label for="equipements" class="completeProcessLabel">
+            equipements
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/featureTools.svg" alt="input icon">
+            </div>
+            <select name="equipements" id="equipements" class="completeProcessInput">
+                <option value="yes"> yes </option>
+                <option value="no"> no </option>
+            </select>
+        </div>
+        <label for="equipements" class="completeProcessLabel">
+            coordones
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/badge_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+            </div>
+            <select name="equipements" id="equipements" class="completeProcessInput">
+                <option value="yes"> personne physique </option>
+                <option value="no"> societe </option>
+            </select>
+        </div>
+        <label for="numberOfPeople" class="completeProcessLabel">
+            objet de location
+        </label>
+        <div class="inputContainer">
+            <div class="iconContainer">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/emoji_objects_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+            </div>
+            <input type="text" id="numberOfPeople" class="completeProcessInput">
+        </div>
+        <div class="finalReservationButton">
+            reservation
+        </div>
+    </div>
+    <div class="reservation" id="reservation">
+        <div class="closeReservationContainer" onclick="closeTimeWindow()">
+            <img src="../../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
+        </div>
+        <div class="reservationDateTitle">
+            Sélectionnez les jours
+        </div>
+        <div class="date">
+            <div class="startDate">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
+                <p id="startDateContainer">le début</p>
+                <input type="date" name="startDate" id="startDate" onchange="setDateStart(this)">
+            </div>
+            <div class="endDate">
+                <img src="../../PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
+                <p id="endDateContainer">la fin</p>
+                <input type="date" name="endDate" id="endDate" onchange="setDateEnd(this)">
+            </div>
+        </div>
+        <div id="period" class="period">
+            <label for="period2">
+                <input type="radio" name="period" id="period2" checked>
+                <span>journée totale</span>
+            </label>
+            <label for="period1">
+                <input type="radio" name="period" id="period1">
+                <span>demi journée</span>
+            </label>
+        </div>
+        <div class="dateUnavailable">
+            Malheureusement, la salle n'est pas disponible à la date que vous avez indiquée
+        </div>
+        <div class="checkButton" onclick="openReservationProcess()">
+            vérification
+        </div>
+    </div>
+    <div class="rentalHalls" id="rentalHalls">
+    </div>
+    <script>
+        equipementDetail();
+    </script>
+</body>
+
+</html>
+
+>>>>>>> mostafaBranch
 </html>
