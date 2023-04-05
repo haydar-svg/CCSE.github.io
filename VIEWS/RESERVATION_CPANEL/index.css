@@ -1,0 +1,566 @@
+
+.title {
+    font-size: 30px;
+    padding-top: 40px;
+    color: #23364d;
+    text-transform: lowercase !important;
+    padding-left: 10%;
+}
+
+.tableCotainer {
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px 2px #6d6d6d17;
+}
+
+.tableCotainer>div:last-of-type {
+    border-bottom: 0px;
+}
+
+.tableHead {
+    width: 100%;
+    height: 50px;
+    background-color: #edeff2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tableHead>div {
+    font-size: 18px;
+    color: #888;
+    text-transform: uppercase !important;
+    width: 16.666%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.tableHead>div:last-of-type {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.infoLine {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #222;
+    border-bottom: 1px#ddd solid;
+}
+
+.infoLine>div {
+    width: 16.666%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.infoLine>div:last-of-type {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.name {
+    font-size: 18px;
+    color: #23364d;
+}
+
+.number {
+    font-size: 24px;
+    color: #23364d;
+}
+
+.dayText {
+    font-size: 14px;
+    color: #555;
+    padding-top: 8px;
+}
+
+.startDateTable,
+.endDateTable,
+.timeAtDay {
+    font-size: 16px;
+    color: #23364dd3;
+}
+
+.moreInfoButton {
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(85, 164, 255, 0.267);
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+.deleteButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #fce8e8;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:1000px) {
+    .title {
+        padding-left: 3%;
+    }
+    .tableCotainer {
+        width: 94%;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width:800px) {
+    .title {
+        font-size: 28px;
+    }
+    .tableHead>div:nth-last-of-type(2) {
+        width: 0%;
+        height: 100%;
+        padding-left: 0px;
+        overflow: hidden;
+        flex-grow: 0;
+    }
+    .infoLine>div:nth-last-of-type(2) {
+        width: 0%;
+        height: 100%;
+        padding-left: 0px;
+        overflow: hidden;
+        flex-grow: 0;
+    }
+    .name {
+        font-size: 16px;
+    }
+    .tableHead>div:last-of-type {
+        width: 30%;
+        padding-left: 0px;
+    }
+    .infoLine>div:last-of-type {
+        width: 30%;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width:650px) {
+    .title {
+        font-size: 26px;
+    }
+    .tableHead>div:nth-last-of-type(3) {
+        width: 0%;
+        height: 100%;
+        padding-left: 0px;
+        overflow: hidden;
+        flex-grow: 0;
+    }
+    .infoLine>div:nth-last-of-type(3) {
+        width: 0%;
+        height: 100%;
+        padding-left: 0px;
+        overflow: hidden;
+        flex-grow: 0;
+    }
+}
+
+@media (max-width:550px) {
+    .title {
+        font-size: 24px;
+    }
+    .tableHead>div:nth-last-of-type(4) {
+        width: 0%;
+        height: 100%;
+        padding-left: 0px;
+        overflow: hidden;
+        flex-grow: 0;
+    }
+    .infoLine>div:nth-last-of-type(4) {
+        width: 0%;
+        height: 100%;
+        padding-left: 0px;
+        overflow: hidden;
+        flex-grow: 0;
+    }
+    .tableHead>div:last-of-type {
+        width: 35%;
+        padding-left: 0px;
+    }
+    .infoLine>div:last-of-type {
+        width: 35%;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width:450px) {
+    .title {
+        font-size: 22px;
+    }
+    .tableHead>div:first-of-type {
+        width: 35%;
+    }
+    .tableHead>div:last-of-type {
+        width: 40%;
+    }
+    .infoLine>div:first-of-type {
+        width: 35%;
+    }
+    .infoLine>div:last-of-type {
+        width: 40%;
+    }
+}
+
+footer {
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+}
+/* ////////////////////// */
+/* ////////////////////// */
+
+.completeReservationProcessContainer {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.justForScrolling {
+    width: 100%;
+    height: 150vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.completeReservationProcess {
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    box-shadow: 0px 0px 10px 4px #00000025;
+}
+
+.closeCompleteReservationProcess {
+    width: 40px;
+    height: 40px;
+    background-color: #c7c7c78e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    cursor: pointer;
+}
+
+.closeCompleteReservationProcess>img {
+    opacity: .8;
+}
+
+.reservationDateTitle {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-left: 5%;
+    color: #444;
+}
+
+.clientPhoneNumber {
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #edeff2;
+    overflow: hidden;
+    border: 0;
+}
+
+.clientPhoneNumber>img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.clientPhoneNumber>input {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    margin: 0;
+    font-size: 20px;
+    color: #555;
+    margin-left: 10px;
+    text-transform: lowercase !important;
+}
+
+.date {
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.startDate,
+.endDate {
+    width: 48%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.startDate>img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.startDate>p {
+    font-size: 20px;
+    color: #555;
+    margin-left: 20px;
+    text-transform: lowercase !important;
+}
+
+.endDate>img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.endDate>p {
+    font-size: 20px;
+    color: #555;
+    margin-left: 20px;
+    text-transform: lowercase !important;
+}
+
+.period {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.period>label {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.period>label>span {
+    font-size: 18px;
+    margin-left: 5px;
+    color: #444;
+}
+
+.period>label>input {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+@media (max-width:550px) {
+    .justForScrollingIntoDate {
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .reservation {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        border-radius: 0px;
+    }
+    .closeReservationContainer {
+        border-radius: 5px;
+        right: 5%;
+        top: 10px;
+    }
+    .reservationDateTitle {
+        padding-top: 80px;
+    }
+    .clientPhoneNumber {
+        height: 40px;
+    }
+    .clientPhoneNumber>img {
+        width: 30px;
+        margin-left: 10px;
+    }
+    .clientPhoneNumber>input {
+        height: 40px;
+        font-size: 18px;
+    }
+    .date {
+        height: 40px;
+    }
+    .startDate,
+    .endDate {
+        width: 49%;
+        height: 40px;
+    }
+    .startDate>img {
+        width: 30px;
+    }
+    .startDate>p {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .endDate>img {
+        width: 30px;
+    }
+    .endDate>p {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+}
+
+.completeReservationTitle {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-left: 5%;
+    color: #444;
+}
+
+.completeProcessLabel {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 5%;
+    color: #666;
+    font-family: 'OswaldLight' !important;
+    font-weight: 600;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.inputContainer {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.iconContainer {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.iconContainer>img {
+    width: 30px;
+}
+
+.completeProcessInput {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    position: relative;
+    display: block;
+    border: none;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #444;
+    text-transform: lowercase !important;
+    letter-spacing: 1px;
+}
+
+.divForSpace {
+    height: 50px;
+}
+
+@media (max-width:650px) {
+    .justForScrolling {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .completeReservationProcess {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        top: 0px;
+    }
+    .closeCompleteReservationProcess {
+        border-radius: 5px;
+        right: 5%;
+        top: 10px;
+    }
+    .completeReservationTitle {
+        padding-top: 50px;
+    }
+    .finalReservationButton {
+        width: 90%;
+        height: 45px;
+        margin-left: 5%;
+        border-radius: 5px;
+    }
+}
+

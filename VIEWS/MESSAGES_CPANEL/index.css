@@ -1,0 +1,136 @@
+
+.messagesContainer {
+    width: 80%;
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    font-size: 30px;
+    padding-top: 40px;
+    color: #23364d;
+    text-transform: lowercase !important;
+}
+
+.messageContianer {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    position: relative;
+}
+
+.userInfo {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userPersonnalInfo {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.userPicture {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.userPicture>img {
+    width: 80px;
+    opacity: 0.5;
+}
+
+.userNameAndPhone {
+    width: auto;
+    height: 40px;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.userNameAndPhone>p:nth-of-type(1) {
+    width: 100%;
+    padding-left: 10px;
+    color: #23364dcb;
+    font-size: 16px;
+    text-transform: uppercase !important;
+
+}
+
+.timeOfsend {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 5px;
+    color: #23364d;
+    font-size: 14px;
+}
+
+.messageText {
+    width: 100%;
+    height: auto;
+    border-radius: 0px 10px 10px 10px;
+    background-color: #edeff2;
+    margin-top: 10px;
+    padding: 20px;
+    color: #23364d;
+    font-size: 18px;
+    font-family: 'OswaldLight' !important;
+    text-transform: lowercase !important;
+}
+
+.deleteMessageButton {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    background-color: #fce8e8;
+    margin-top: 10px;
+    color: red;
+    cursor: pointer;
+    padding-right: 4px;
+}
+
+footer {
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 80px;
+}
+
+@media (max-width:600px) {
+    .messagesContainer {
+        width: 90%;
+    }
+    .userNameAndPhone>p:nth-of-type(1) {
+        font-size: 14px;
+    }
+    .deleteMessageButton {
+        width: 100%;
+    }
+
+.messageText {
+    padding: 10px;
+    font-size: 15px;
+}
+
+}

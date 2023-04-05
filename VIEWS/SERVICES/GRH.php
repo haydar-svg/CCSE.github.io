@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ccse">
     <meta name="description" content=" LE CABINET CCSE EST UN CABINET INDÉPENDANT SPÉCIALISÉ DANS LE CONSULTING, LA FORMATION, L’ACCOMPAGNEMENT, L’ASSISTANCE, L’ORIENTATION ET LE DÉVELOPPEMENT DU CAPITAL HUMAIN, DEPUIS 2011.">
-    <link rel="icon" href="../../PUBLIC/IMAGES/icon.png">
-    <link rel="stylesheet" href="../../PUBLIC/CSS/Public.css">
-    <link rel="stylesheet" href="../../PUBLIC/FONT/Oswald/Font.css">
-    <link rel="stylesheet" href="./serviceDescription.css">
-    <script src="../../PUBLIC/JS/global.js"></script>
+    <link rel="icon" href="../PUBLIC/IMAGES/icon.png">
+    <link rel="stylesheet" href="../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../PUBLIC/FONT/Oswald/Font.css">
+    <link rel="stylesheet" href="../VIEWS/SERVICES/serviceDescription.css">
+    <script src="../PUBLIC/JS/global.js"></script>
     <title>
         Gestion de Ressources Humaines
     </title>
@@ -20,14 +20,14 @@
 <body>
     <style>
         .descriptionTitleAndPictures {
-            background-image: linear-gradient(#00000088, #00000088), url(../../PUBLIC/IMAGES/services/Ashton\ College\ Announces\ Academic\ Alignment\ of\ its\ Diploma\ in\ Human\ Resources\ Management\ Program.jpeg);
+            background-image: linear-gradient(#00000088, #00000088), url(../PUBLIC/IMAGES/services/GRH.jpeg);
         }
     </style>
     <div class="descriptionContainer">
         <div class="descriptionTitleAndPictures">
             <div class="backToServicePage">
-                <a href="../../index.html#services">
-                    <img src="../../PUBLIC/IMAGES/services/back.svg" alt="back link">
+                <a href="./CCSE#services">
+                    <img src="../PUBLIC/IMAGES/services/back.svg" alt="back link">
                 </a>
             </div>
             <div class="serviceInfoText">
@@ -42,13 +42,13 @@
             <img src="" class="designIcon" id="sectionBackgroundDesign" alt="design">
             <div class="switchInfo">
                 <div class="circel circel1" onclick="vision(this)" id="vision">
-                    <img src="../../PUBLIC/IMAGES/services/telescope-observation-svgrepo-com.svg" alt="telescope">
+                    <img src="../PUBLIC/IMAGES/services/telescope-observation-svgrepo-com.svg" alt="telescope">
                 </div>
                 <div class="circel circel2" onclick="mission(this)" id="mission">
-                    <img src="../../PUBLIC/IMAGES/services/assignment_turned_in_FILL0_wght400_GRAD0_opsz48.svg" alt="assignment">
+                    <img src="../PUBLIC/IMAGES/services/assignment_turned_in_FILL0_wght400_GRAD0_opsz48.svg" alt="assignment">
                 </div>
                 <div class="circel circel3" onclick="objectif(this)" id="objectif">
-                    <img src="../../PUBLIC/IMAGES/services/flag_FILL0_wght400_GRAD0_opsz48.svg" alt="flag">
+                    <img src="../PUBLIC/IMAGES/services/flag_FILL0_wght400_GRAD0_opsz48.svg" alt="flag">
                 </div>
             </div>
             <div class="infoAboutServiceTitle" id="sectionTitle">
@@ -69,7 +69,7 @@ Nous comprenons que les ressources humaines sont la clé de la réussite de tout
 pourquoi nous offrons une gamme complète de services pour vous aider à gérer votre personnel de
 manière optimale.
             `;
-            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/telescopeDesign.svg');
+            $('sectionBackgroundDesign').setAttribute('src', '../PUBLIC/IMAGES/services/telescopeDesign.svg');
             $('mission').style.opacity = '0.6';
             $('mission').style.width = '60px';
             $('mission').style.height = '60px';
@@ -91,7 +91,7 @@ Nous offrons une gamme de services, y compris le recrutement, la formation, la g
 performance, la rémunération et les avantages sociaux, pour répondre à tous vos besoins en
 matière de ressources humaines.
             `;
-            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/assignmentDesign.svg');
+            $('sectionBackgroundDesign').setAttribute('src', '../PUBLIC/IMAGES/services/assignmentDesign.svg');
             $('vision').style.opacity = '0.6';
             $('vision').style.width = '60px';
             $('vision').style.height = '60px';
@@ -111,7 +111,7 @@ Nous travaillons en étroite collaboration avec vous pour comprendre vos objecti
 identifier les opportunités de croissance et proposer des solutions pratiques et durables
 pour vous aider à atteindre vos objectifs en matière de gestion des ressources humaines.
             `;
-            $('sectionBackgroundDesign').setAttribute('src', '../../PUBLIC/IMAGES/services/flagDesign.svg');
+            $('sectionBackgroundDesign').setAttribute('src', '../PUBLIC/IMAGES/services/flagDesign.svg');
             $('vision').style.opacity = '0.6';
             $('vision').style.width = '60px';
             $('vision').style.height = '60px';

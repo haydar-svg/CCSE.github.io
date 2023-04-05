@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once('./MODELS/msgFunction.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,38 +11,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ccse">
     <meta name="description" content="LE CABINET CCSE EST UN CABINET INDÉPENDANT SPÉCIALISÉ DANS LE CONSULTING, LA FORMATION, L’ACCOMPAGNEMENT, L’ASSISTANCE, L’ORIENTATION ET LE DÉVELOPPEMENT DU CAPITAL HUMAIN, DEPUIS 2011.">
+    <link rel="icon" href="../PUBLIC/IMAGES/icon.png">
+    <link rel="stylesheet" href="../PUBLIC/CSS/Public.css">
+    <link rel="stylesheet" href="../PUBLIC/FONT/Oswald/Font.css">
+    <script src="../PUBLIC/JS/global.js"></script>
+    <link rel="stylesheet" href="../VIEWS/msgFunction/index.css">
+    <link rel="stylesheet" href="../VIEWS/LANDING_PAGE/index.css">
+    <link rel="stylesheet" href="../VIEWS/LANDING_PAGE/navBar.css">
+    <script src="../VIEWS/LANDING_PAGE/index.js"></script>
+    <link rel="stylesheet" href="../VIEWS/SERVICES/index.css">
+    <link rel="stylesheet" href="../VIEWS/RENTAL_HALLS/index.css">
+    <link rel="stylesheet" href="../VIEWS/RENTAL_HALLS/reservation.css">
+    <script src="../VIEWS/RENTAL_HALLS/index.js"></script>
+    <link rel="stylesheet" href="../VIEWS/REFERENCES/index.css">
+    <script src="../VIEWS/REFERENCES/index.js"></script>
+    <link rel="stylesheet" href="../VIEWS/FOOTER/index.css">
+    <script src="../VIEWS/FOOTER/index.js"></script>
+    <link rel="stylesheet" href="../VIEWS/FOOTER/sendMessage.css">
+    <link rel="stylesheet" href="../VIEWS/EVENTS/index.css">
+    <script src="../VIEWS/EVENTS/index.js"></script>
     <title>CCSE</title>
 </head>
 
 <body onclick="DropUp(event)+closeLinksPhone(event)" id="body">
+<div id="userMessagesArea">
+    <?php
+    if(isset($_SESSION['errorMsg'])){
+        msgError($_SESSION['errorMsg']);
+        $_SESSION['errorMsg']=null;
+    }
+    else if(isset($_SESSION['successMsg'])){
+        msgSuccess($_SESSION['successMsg']);
+        $_SESSION['successMsg']=null;
+    }
+    ?>
+</div>
+<script>
+    function hiddeMessage(){
+        $('userMessagesArea').innerHTML="";
+    }
+</script>
     <nav id="nav">
         <div class="logo">
-            <img src="./PUBLIC/IMAGES/landingPage/ccseLogo.png" alt="">
+            <img src="../PUBLIC/IMAGES/landingPage/ccseLogo.png" alt="logo">
         </div>
         <div class="serviceDropDownListNavBar" id="dropDown" onclick="DropDwon(event)">
             <div class="serviceDropDownTitle">
                 <p>
                     SERVICES
                 </p>
-                <img src="./PUBLIC/IMAGES/landingPage/chevron-up.svg" alt="chevronUp" id="chevronDropDown">
+                <img src="../PUBLIC/IMAGES/landingPage/chevron-up.svg" alt="chevronUp" id="chevronDropDown">
             </div>
             <div class="linkServicesContainer">
-                <a href="./VIEWS/SERVICES/JURIDIQUE.html" class="oneServiceContainer">
+                <a href="./JURIDIQUE" class="oneServiceContainer">
                     JURIDIQUE
                 </a>
-                <a href="./VIEWS/SERVICES/CONSEIL.html" class="oneServiceContainer">
+                <a href="./CONSEIL" class="oneServiceContainer">
                     CONSEIL
                 </a>
-                <a href="./VIEWS/SERVICES/COACHING.html" class="oneServiceContainer">
+                <a href="./COACHING" class="oneServiceContainer">
                     COACHING
                 </a>
-                <a href="./VIEWS/SERVICES/IF.html" class="oneServiceContainer">
+                <a href="./IF" class="oneServiceContainer">
                     INGÉNIERIE DE FORMATION
                 </a>
-                <a href="./VIEWS/SERVICES/GRH.html" class="oneServiceContainer">
+                <a href="./GRH" class="oneServiceContainer">
                     GRH
                 </a>
-                <a href="./VIEWS/SERVICES/FORMATION.html" class="oneServiceContainer">
+                <a href="./FORMATION" class="oneServiceContainer">
                     FORMATION
                 </a>
             </div>
@@ -53,7 +93,7 @@
             Contactez nous
         </a>
         <div class="navList">
-            <img src="./PUBLIC/IMAGES/landingPage/list.svg" alt="list" onclick="openLinksPhone(event)">
+            <img src="../PUBLIC/IMAGES/landingPage/list.svg" alt="list" onclick="openLinksPhone(event)">
             <div class="linksPhoneSize" id="linksPhoneSize">
                 <a href="#servicesTitle" class="linkPhone">
                     SERVICES
@@ -90,13 +130,13 @@
                     </span>
                     </div>
                     <div class="designElement0">
-                        <img src="./PUBLIC/IMAGES/landingPage/animationDesignImage_1.png" alt="">
+                        <img src="../PUBLIC/IMAGES/landingPage/animationDesignImage_1.png" alt="">
                     </div>
                     <div class="designElement1">
-                        <img src="./PUBLIC/IMAGES/landingPage/animationDesignImage_2.png" alt="">
+                        <img src="../PUBLIC/IMAGES/landingPage/animationDesignImage_2.png" alt="">
                     </div>
                     <div class="designElement2">
-                        <img src="./PUBLIC/IMAGES/landingPage/animationDesignImage_3.png" alt="">
+                        <img src="../PUBLIC/IMAGES/landingPage/animationDesignImage_3.png" alt="">
                     </div>
                     <div class="designElement3">
                     </div>
@@ -119,8 +159,8 @@
         <p class="backgroundTitle">
             CCSE
         </p>
-        <a href="./VIEWS/SERVICES/JURIDIQUE.html" class="service">
-            <img src="./PUBLIC/IMAGES/services/CONSEIL JURIDIQUE.svg" alt="CONSEIL JURIDIQUE">
+        <a href="./JURIDIQUE" class="service">
+            <img src="../PUBLIC/IMAGES/services/CONSEIL JURIDIQUE.svg" alt="CONSEIL JURIDIQUE">
             <div class="serviceName">
                 JURIDIQUE
             </div>
@@ -129,11 +169,11 @@
             </div>
             <div class="learnMoreAboutService">
                 Lire les détails
-                <img src="./PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
+                <img src="../PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
             </div>
         </a>
-        <a href="./VIEWS/SERVICES/CONSEIL.html" class="service">
-            <img src="./PUBLIC/IMAGES/services/CONSEIL.svg" alt="CONSEIL">
+        <a href="./CONSEIL" class="service">
+            <img src="../PUBLIC/IMAGES/services/CONSEIL.svg" alt="CONSEIL">
             <div class="serviceName">
                 CONSEIL
             </div>
@@ -141,11 +181,11 @@
                 Profitez d'un accompagnement opérationnel et stratégique personnalisé au quotidien, avec des conseils d'experts pointus pour vous aider à mener à bien vos projets clés. </div>
             <div class="learnMoreAboutService">
                 Lire les détails
-                <img src="./PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
+                <img src="../PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
             </div>
         </a>
-        <a href="./VIEWS/SERVICES/COACHING.html" class="service">
-            <img src="./PUBLIC/IMAGES/services/COACHING.svg" alt="COACHING">
+        <a href="./COACHING" class="service">
+            <img src="../PUBLIC/IMAGES/services/COACHING.svg" alt="COACHING">
             <div class="serviceName">
                 COACHING
             </div>
@@ -153,11 +193,11 @@
                 Atteignez vos objectifs personnels et professionnels grâce à notre service de coaching personnalisé </div>
             <div class="learnMoreAboutService">
                 Lire les détails
-                <img src="./PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
+                <img src="../PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
             </div>
         </a>
-        <a href="./VIEWS/SERVICES/IF.html" class="service">
-            <img src="./PUBLIC/IMAGES/services/CERTIFICATION.svg" alt="CERTIFICATION">
+        <a href="./IF" class="service">
+            <img src="../PUBLIC/IMAGES/services/INGENIERIE.svg" alt="CERTIFICATION">
             <div class="serviceName">
                 INGÉNIERIE DE FORMATION
             </div>
@@ -165,11 +205,11 @@
                 Concevez des programmes de formation efficaces et sur mesure avec notre service d'ingénierie de formation </div>
             <div class="learnMoreAboutService">
                 Lire les détails
-                <img src="./PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
+                <img src="../PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
             </div>
         </a>
-        <a href="./VIEWS/SERVICES/GRH.html" class="service">
-            <img src="./PUBLIC/IMAGES/services/INGENIERIE.svg" alt="INGENIERIE">
+        <a href="./GRH" class="service">
+            <img src="../PUBLIC/IMAGES/services/GRH.svg" alt="INGENIERIE">
             <div class="serviceName">
                 Gestion de Ressources Humaines
             </div>
@@ -177,11 +217,11 @@
                 Optimisez la gestion de vos ressources humaines et améliorez la performance de votre entreprise avec notre service de conseil en GRH </div>
             <div class="learnMoreAboutService">
                 Lire les détails
-                <img src="./PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
+                <img src="../PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
             </div>
         </a>
-        <a href="./VIEWS/SERVICES/FORMATION.html" class="service">
-            <img src="./PUBLIC/IMAGES/services/FORMATION.svg" alt="FORMATION">
+        <a href="./FORMATION" class="service">
+            <img src="../PUBLIC/IMAGES/services/FORMATION.svg" alt="FORMATION">
             <div class="serviceName">
                 FORMATION
             </div>
@@ -189,7 +229,7 @@
                 Développez les compétences de vos employés et augmentez la productivité de votre entreprise grâce à notre service de formation professionnelle </div>
             <div class="learnMoreAboutService">
                 Lire les détails
-                <img src="./PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
+                <img src="../PUBLIC/IMAGES/services/chevron.svg" alt="start learn">
             </div>
         </a>
     </div>
@@ -197,7 +237,7 @@
         <div class="justForScrolling">
             <div class="completeReservationProcess" id="completeReservationProcess">
                 <div class="closeCompleteReservationProcess" onclick="closeReservationProcess(event)">
-                    <img src="./PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
+                    <img src="../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
                 </div>
                 <div class="divForSpaceAV"></div>
 
@@ -212,7 +252,7 @@
                 </label>
                 <div class="inputContainer">
                     <div class="iconContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/groups_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/groups_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
                     </div>
                     <input type="text" id="numberOfPeople" class="completeProcessInput">
                 </div>
@@ -221,7 +261,7 @@
                 </label>
                 <div class="inputContainer">
                     <div class="iconContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/coffee.svg" alt="input icon">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/coffee.svg" alt="input icon">
                     </div>
                     <select name="breakCoffee" id="breakCoffee" class="completeProcessInput">
                         <option value="yes"> yes </option>
@@ -234,7 +274,7 @@
                 </label>
                 <div class="inputContainer">
                     <div class="iconContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/featureTools.svg" alt="input icon">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/featureTools.svg" alt="input icon">
                     </div>
                     <select name="equipements" id="equipements" class="completeProcessInput">
                         <option value="yes"> yes </option>
@@ -246,7 +286,7 @@
                 </label>
                 <div class="inputContainer">
                     <div class="iconContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/badge_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/badge_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
                     </div>
                     <select name="equipements" id="equipements" class="completeProcessInput">
                         <option value="yes"> personne physique </option>
@@ -258,7 +298,7 @@
                 </label>
                 <div class="inputContainer">
                     <div class="iconContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/emoji_objects_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/emoji_objects_FILL0_wght400_GRAD0_opsz48.svg" alt="input icon">
                     </div>
                     <input type="text" id="numberOfPeople" class="completeProcessInput">
                 </div>
@@ -273,23 +313,23 @@
         <div class="justForScrollingIntoDate">
             <div class="reservation" id="reservation">
                 <div class="closeReservationContainer" onclick="closeTimeWindow(event)">
-                    <img src="./PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
+                    <img src="../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
                 </div>
                 <div class="reservationDateTitle">
                     Sélectionnez les jours
                 </div>
                 <div class="clientPhoneNumber">
-                    <img src="./PUBLIC/IMAGES/rentalHalls/phone.svg" alt="phone icon">
+                    <img src="../PUBLIC/IMAGES/rentalHalls/phone.svg" alt="phone icon">
                     <input type="text" name="clientPhoneNumber" id="clientPhoneNumber" class="clientPhoneNumber" placeholder="Numéro de téléphone">
                 </div>
                 <div class="date">
                     <div class="startDate">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
                         <p id="startDateContainer">le début</p>
                         <input type="date" name="startDate" id="startDate" onchange="setDateStart(this)">
                     </div>
                     <div class="endDate">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/date.svg" alt="date icon">
                         <p id="endDateContainer">la fin</p>
                         <input type="date" name="endDate" id="endDate" onchange="setDateEnd(this)">
                     </div>
@@ -315,17 +355,17 @@
     </div>
     <div class="seePictureWindow" id="seePictureWindow">
         <div class="closeIconForPicturesWindow" onclick="hiddePictures()">
-            <img src="./PUBLIC/IMAGES/rentalHalls/close.svg" alt="close icon">
+            <img src="../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close icon">
         </div>
         <div class="sallePicturesContainer">
             <div class="oneImageContainer">
-                <img src="./PUBLIC/IMAGES/salleImages/salleImage1.JPG" alt="salle image">
+                <img src="../PUBLIC/IMAGES/salleImages/salleImage1.JPG" alt="salle image">
             </div>
             <div class="oneImageContainer">
-                <img src="./PUBLIC/IMAGES/salleImages/salleImage2.JPG" alt="salle image">
+                <img src="../PUBLIC/IMAGES/salleImages/salleImage2.JPG" alt="salle image">
             </div>
             <div class="oneImageContainer">
-                <img src="./PUBLIC/IMAGES/salleImages/salleImage3.JPG" alt="salle image">
+                <img src="../PUBLIC/IMAGES/salleImages/salleImage3.JPG" alt="salle image">
             </div>
         </div>
     </div>
@@ -334,15 +374,60 @@
     <script>
         equipementDetail();
     </script>
+    <div class="eventDetailsContainer" id="eventDetailsContainer">
+        <div class="closeIconForEventDetails" onclick="closeEventDetails()">
+            <img src="../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close icon">
+        </div>
+        <div class="eventDetails">
+            <div class="titleInfoAboutEvent">
+                <div class="eventBigTitle">
+                    hello every one here
+                </div>
+                <div class="imageTitleContainer">
+                    <img src="../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event picture">
+                </div>
+            </div>
+            <div class="eventDetailsTextAboutEvent">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint modi necessitatibus incidunt quis, architecto, eveniet quam omnis aliquam perferendis corrupti amet natus debitis minima molestiae. Provident adipisci labore dolorum exercitationem.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sed ullam quis quidem, quae excepturi, unde cumque amet ea asperiores consequuntur odio quam minima maxime natus, possimus voluptatibus a neque!
+            </div>
+        </div>
+    </div>
     <div class="actTitle" id="eventsTitle">
         actualité
     </div>
-    <div class="shapesContainer" id="events"> <img src="./PUBLIC/IMAGES/chevron_left.svg" alt="chevron left" class="scrollToLeftEvent" onclick="scrollToLeftEvent()">
+    <div class="shapesContainer" id="events"> <img src="../PUBLIC/IMAGES/refernces/chevron_left.svg" alt="chevron left" class="scrollToLeftEvent" onclick="scrollToLeftEvent()">
         <div class="scrollEvents" id="scrollEvents">
             <div class="events">
                 <div class="oneShape">
                     <div class="eventImgContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                    </div>
+                    <div class="eventTitle">
+                        Entretien avec la société Alpha
+                    </div>
+                    <div class="eventDescription">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
+                    <div class="readMoreAboutEvent" onclick="openEventDetails()">
+                        Lire les détails
+                    </div>
+                </div>
+                <div class="oneShape">
+                    <div class="eventImgContainer">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                    </div>
+                    <div class="eventTitle">
+                        Entretien avec la société Alpha
+                    </div>
+                    <div class="eventDescription">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
+                    <div class="readMoreAboutEvent" onclick="openEventDetails()">
+                        Lire les détails
+                    </div>
+                </div>
+                <div class="oneShape">
+                    <div class="eventImgContainer">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
                     </div>
                     <div class="eventTitle">
                         Entretien avec la société Alpha
@@ -355,7 +440,7 @@
                 </div>
                 <div class="oneShape">
                     <div class="eventImgContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
                     </div>
                     <div class="eventTitle">
                         Entretien avec la société Alpha
@@ -368,33 +453,7 @@
                 </div>
                 <div class="oneShape">
                     <div class="eventImgContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
-                    </div>
-                    <div class="eventTitle">
-                        Entretien avec la société Alpha
-                    </div>
-                    <div class="eventDescription">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
-                    <div class="readMoreAboutEvent">
-                        Lire les détails
-                    </div>
-                </div>
-                <div class="oneShape">
-                    <div class="eventImgContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
-                    </div>
-                    <div class="eventTitle">
-                        Entretien avec la société Alpha
-                    </div>
-                    <div class="eventDescription">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure dolorum architecto illum odio error, doloremque voluptate dolorem optio, cum labore necessitatibus aperiam atque libero accusantium minima beatae temporibus voluptas quae. ... </div>
-                    <div class="readMoreAboutEvent">
-                        Lire les détails
-                    </div>
-                </div>
-                <div class="oneShape">
-                    <div class="eventImgContainer">
-                        <img src="./PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
+                        <img src="../PUBLIC/IMAGES/rentalHalls/84a206.png" alt="event img">
                     </div>
                     <div class="eventTitle">
                         Entretien avec la société Alpha
@@ -407,82 +466,82 @@
                 </div>
             </div>
         </div>
-        <img src="./PUBLIC/IMAGES/chevron_right.svg" alt="chevron left" class="scrollToRightEvent" onclick="scrollToRightEvent()">
+        <img src="../PUBLIC/IMAGES/refernces/chevron_right.svg" alt="chevron left" class="scrollToRightEvent" onclick="scrollToRightEvent()">
     </div>
     <div class="referencesTitle" id="referencesTitle">
         références
     </div>
     <div class="referncesContainer" id="references">
-        <img src="./PUBLIC/IMAGES/chevron_left.svg" alt="chevron left" class="scrollToLeft" onclick="scrollToLeft()">
+        <img src="../PUBLIC/IMAGES/refernces/chevron_left.svg" alt="chevron left" class="scrollToLeft" onclick="scrollToLeft()">
         <div class="scroll" id="scroll">
             <div class="references" id="references">
-                <img src="./PUBLIC/IMAGES/refernces/AL_AMANAb.png" name="./PUBLIC/IMAGES/refernces/AL_AMANA.png" alt="refernece" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/ANAPECb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/ANAPEC.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/BRICOMAb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/BRICOMA.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/OFPPTb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/OFPPT.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/GIACb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/GIAC.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/GIAC_TERTIAIREb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/GIAC_TERTIAIRE.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/INSTITUTION_MOULAYISMAILb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/INSTITUTION_MOULAYISMAIL.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/IRRIESTb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/IRRIEST.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/MOULOUYAb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/MOULOUYA.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
-                <img src="./PUBLIC/IMAGES/refernces/SMSb.png" alt="refernece" name="./PUBLIC/IMAGES/refernces/SMS.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/AL_AMANAb.png" name="../PUBLIC/IMAGES/refernces/AL_AMANA.png" alt="refernece" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/ANAPECb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/ANAPEC.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/BRICOMAb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/BRICOMA.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/OFPPTb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/OFPPT.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/GIACb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/GIAC.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/GIAC_TERTIAIREb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/GIAC_TERTIAIRE.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/INSTITUTION_MOULAYISMAILb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/INSTITUTION_MOULAYISMAIL.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/IRRIESTb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/IRRIEST.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/MOULOUYAb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/MOULOUYA.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
+                <img src="../PUBLIC/IMAGES/refernces/SMSb.png" alt="refernece" name="../PUBLIC/IMAGES/refernces/SMS.png" onmouseenter="changeImages(this)" onmouseleave="changeImages(this)">
             </div>
         </div>
-        <img src="./PUBLIC/IMAGES/chevron_right.svg" alt="chevron left" class="scrollToRight" onclick="scrollToRight()">
+        <img src="../PUBLIC/IMAGES/refernces/chevron_right.svg" alt="chevron left" class="scrollToRight" onclick="scrollToRight()">
     </div>
     <div class="sendMessageWindowParrent" id="sendMessageWindowParrent">
         <div class="windowForScrollingInphone">
-            <div class="sendMessageWindow">
+            <form method="post" action="../MODELS/newMessage.php" class="sendMessageWindow">
                 <div class="closeMessageWindow" onclick="closeMessageWindow()">
-                    <img src="./PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
+                    <img src="../PUBLIC/IMAGES/rentalHalls/close.svg" alt="close window">
                 </div>
                 <div class="sendMessageTitle">
                     Remplissez les informations suivantes
                 </div>
                 <div class="inputSendMessage">
                     <div>
-                        <img src="./PUBLIC/IMAGES/footer/persone.svg" alt="input icon">
+                        <img src="../PUBLIC/IMAGES/footer/persone.svg" alt="input icon">
                     </div>
-                    <input type="text" id="fullNameForUser" placeholder="le nom complet">
+                    <input type="text" id="fullNameForUser" name="userFullName" require placeholder="le nom complet">
                 </div>
                 <div class="inputSendMessage">
                     <div>
-                        <img src="./PUBLIC/IMAGES/footer/phone.svg" alt="input icon">
+                        <img src="../PUBLIC/IMAGES/footer/phone.svg" alt="input icon">
                     </div>
-                    <input type="text" id="fullNameForUser" placeholder="Numéro de téléphone">
+                    <input type="text" id="fullNameForUser" name="userPhoneNumber" placeholder="Numéro de téléphone">
                 </div>
                 <label for="message" class="textareaLabel">
                     Ecrivez votre message ici
                 </label>
-                <textarea name="message" id="message" class="message"></textarea>
-                <button class="sendMessageButton">
+                <textarea name="userMessage" id="message" class="message"></textarea>
+                <button class="sendMessageButton" type="submit">
                     Envoyer
                 </button>
-            </div>
+        </form>
         </div>
     </div>
     <footer id="footer">
         <div class="rightWithLogo">
-            <img src="./PUBLIC/IMAGES/landingPage/ccseLogo.png" alt="ccse logo" class="footerLogo">
+            <img src="../PUBLIC/IMAGES/landingPage/ccseLogo.png" alt="ccse logo" class="footerLogo">
             <div class="sendMessage" onclick="openMessageWindow()">
                 envoyer un message
             </div>
         </div>
         <div class="linksForContactCCSE">
             <div class="contactIconContainer">
-                <img src="./PUBLIC/IMAGES/footer/email.svg" alt="email icon">
+                <img src="../PUBLIC/IMAGES/footer/email.svg" alt="email icon">
             </div>
             <div class="contactIconContainer">
-                <img src="./PUBLIC/IMAGES/footer/phone.svg" alt="phone icon">
+                <img src="../PUBLIC/IMAGES/footer/phone.svg" alt="phone icon">
             </div>
             <div class="contactIconContainer">
-                <img src="./PUBLIC/IMAGES/footer/facebook.svg" alt="facebook icon">
+                <img src="../PUBLIC/IMAGES/footer/facebook.svg" alt="facebook icon">
             </div>
             <div class="contactIconContainer">
-                <img src="./PUBLIC/IMAGES/footer/instagram.svg" alt="instagram icon">
+                <img src="../PUBLIC/IMAGES/footer/instagram.svg" alt="instagram icon">
             </div>
             <div class="contactIconContainer">
-                <img src="./PUBLIC/IMAGES/footer/location.svg" alt="location icon">
+                <img src="../PUBLIC/IMAGES/footer/location.svg" alt="location icon">
             </div>
         </div>
         <p class="rights">
@@ -490,7 +549,5 @@
         </p>
     </footer>
 </body>
-
-</html>
 
 </html>
