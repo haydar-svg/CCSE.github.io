@@ -1,0 +1,97 @@
+.InscriptionForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.inputInscription {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #edeff2;
+    overflow: hidden;
+    border: 0;
+}
+
+.inputInscription>div {
+    width: 10%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputInscription>div>img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.inputInscription>input {
+    width: 90%;
+    height: 50px;
+    background-color: #edeff2;
+    margin: 0;
+    font-size: 20px;
+    color: #555;
+    margin-left: 10px;
+    text-transform: lowercase !important;
+    border: 0;
+}
+.inscriptionButton{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(84, 84, 192);
+    color: #fff;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 0;
+}
+.Select{
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #edeff2;
+    border: none;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #444;
+    text-transform: lowercase !important;
+    letter-spacing: 1px;
+}
+.inputTitle{
+   font-size: 18px;
+    color: #555;
+}
+.infoAboutInscription{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    height: 500px;
+
+}
+@media (max-width:550px) {
+    .inputInscription>input {
+        width: 90%;
+        height: 50px;
+        background-color: #edeff2;
+        margin: 0;
+        font-size: 15px;
+        color: #555;
+        margin-left: 10px;
+        text-transform: lowercase !important;
+        border: 0;
+    }
+    .Select{
+        font-size: 12px;
+    }
+}
